@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Quiz Buddy</h1>
+    <days-filter />
+    <pub-quiz-map />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DaysFilter from './components/DaysFilter.vue'
+import PubQuizMap from './components/PubQuizMap.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    'days-filter': DaysFilter,
+    'pub-quiz-map': PubQuizMap
   }
 }
 </script>
