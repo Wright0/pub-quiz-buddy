@@ -1,20 +1,22 @@
+
 <template lang="html">
   <div class="">
-    <p>his is our map</p>
+    <p>This is our map</p>
 
     <GmapMap
-    :center="{lat:10, lng:10}"
-    :zoom="7"
-    map-type-id="terrain"
-    style="width: 500px; height: 300px"
+    :center="center"
+    :zoom="12"
+    map-type-id="roadmap"
+    style="width: 600px; height: 400px"
     >
+
   <GmapMarker
     :key="index"
-    v-for="(m, index) in markers"
-    :position="m.position"
+    v-for="(marker, index) in markers"
+    :position="marker.position"
     :clickable="true"
-    :draggable="true"
-    @click="center=m.position"
+    :draggable="false"
+    @click="action"
   />
 </GmapMap>
 
@@ -27,9 +29,19 @@
 
 export default {
   name: 'pub-quiz-map',
-  props: ['markers']
-
-}
+  data() {
+      return {
+        center: { lat: 55.950790, lng: -3.195131 },
+        markers: [
+          {id: 74832798432,
+          position: { lat: 55.950790, lng: -3.195131 }},
+          {id: 7483274832,
+          position: { lat: 55.952684, lng: -3.193455 }}
+        ],
+        places: []
+      };
+    }
+  };
 
 </script>
 
