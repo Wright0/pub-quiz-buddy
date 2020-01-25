@@ -34,7 +34,7 @@ export default {
       return {
         center: { lat: 55.950790, lng: -3.195131 },
         markers: [
-          {id: 74832798432,
+          {id: 74832798,
           position: { lat: 55.950790, lng: -3.195131 }},
           {id: 7483274832,
           position: { lat: 55.952684, lng: -3.193455 }}
