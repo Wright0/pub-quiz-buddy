@@ -18,6 +18,7 @@
     :draggable="false"
     @click="action"
   />
+
 </GmapMap>
 
   </div>
