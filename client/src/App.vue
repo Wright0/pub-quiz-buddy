@@ -2,20 +2,26 @@
   <div id="app">
     <h1>Quiz Buddy buddy</h1>
     <days-filter />
-    <pub-quiz-map :markers="markers" />
+    <pub-quiz-map/>
 
   </div>
 </template>
 
 <script>
-import DaysFilter from './components/DaysFilter.vue'
+import DayFilter from './components/DayFilter.vue'
 import PubQuizMap from './components/PubQuizMap.vue'
 
 export default {
   name: 'app',
+  data(){
+    return {
+      quizzes: [],//result of a fetch - will have the DB seeds. Mounted?,
+      selectedDay: "" //will populate with an event bus from DayFilter
+    }
+  }
   components: {
-    'days-filter': DaysFilter,
-    'pub-quiz-map': PubQuizMap
+    'day-filter': DayFilter,
+    'map': PubQuizMap
   }
 }
 </script>

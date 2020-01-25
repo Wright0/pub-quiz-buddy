@@ -1,8 +1,6 @@
 
 <template lang="html">
   <div class="">
-    <p>This is our map</p>
-
     <GmapMap
     :center="center"
     :zoom="12"
@@ -10,18 +8,17 @@
     style="width: 600px; height: 400px"
     >
 
-  <GmapMarker
+    <GmapMarker
     :key="index"
     v-for="(marker, index) in markers"
     :position="marker.position"
     :clickable="true"
     :draggable="false"
     @click="action"
-  />
+    />
+  </GmapMap>
 
-</GmapMap>
-
-  </div>
+</div>
 
 </template>
 
@@ -33,15 +30,23 @@ export default {
   data() {
       return {
         center: { lat: 55.950790, lng: -3.195131 },
-        markers: [
-          {id: 74832798,
-          position: { lat: 55.950790, lng: -3.195131 }},
-          {id: 7483274832,
-          position: { lat: 55.952684, lng: -3.193455 }}
-        ],
-        places: []
-      };
-    }
+        selectedPubId: "" //Set on @click of a marker
+      }
+    },
+    computed: {
+      markers(){
+        // do some stuff.
+        // Make it look like this:
+        // {id: 74832798,
+        // position: { lat: 55.950790, lng: -3.195131 }},
+        // {id: 7483274832,
+        // position: { lat: 55.952684, lng: -3.193455 }}
+      },
+      selectedPubQuiz(selectedPubId){
+        // created by finding matching id (quiz._id and the id being passed in (selected Pub ID))
+      }
+    },
+    props : ["Quizzes", "SelectedDay"]
   };
 
 </script>
