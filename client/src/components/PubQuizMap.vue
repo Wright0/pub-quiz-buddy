@@ -45,7 +45,7 @@ export default {
         return markerList;
       }
     },
-    props : ["Quizzes", "SelectedDay"]
+    props : ["quizzes", "selectedDay"]
   };
 
 </script>
