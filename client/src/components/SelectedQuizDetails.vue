@@ -1,12 +1,13 @@
 <template lang="html">
   <div class="details-box">
-    <h1>hey gurl hey</h1>
+    <h1>{{ quizId }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'pub-quiz-details'
+  name: 'pub-quiz-details',
+  props: ["quizId"]
 }
 </script>
 
