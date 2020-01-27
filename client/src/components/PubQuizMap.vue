@@ -36,11 +36,7 @@ export default {
       markers(){
         const markerList = [
           {id: 74832798,
-            position: { lat: 55.950790, lng: -3.195131 }
-          },
-          {id: 74832798,
-            position: { lat: 55.950790, lng: -3.193455 }
-          }
+            position: { lat: 55.950790, lng: -3.195131 }}
         ]
         return markerList;
       }
