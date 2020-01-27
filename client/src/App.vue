@@ -58,9 +58,6 @@ body {
   font-family: 'Quattrocento', serif;
   font-family: 'Oswald', sans-serif;
 }
-#app {
-
-}
 
 .cont {
   width: 100%;

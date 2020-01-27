@@ -1,6 +1,6 @@
 <template lang="html">
   <div>
-    <pub-quiz-details :quizId="selectedPubId" />
+    <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
     <div class="map-container">
       <GmapMap
       :center="center"
@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       center: { lat: 55.950790, lng: -3.195131 },
-      selectedPubId: "hi"
+      selectedPubId: ""
     }
   },
   computed: {
