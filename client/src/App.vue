@@ -43,7 +43,7 @@ export default {
 
       PubQuizzesService.getQuizzesByDay(this.selectedDay)
       .then(fetchedQuizzes => this.selectedDayQuizzes = fetchedQuizzes)
-      })
+    })
   },
 }
 </script>
@@ -56,7 +56,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Quattrocento', serif;
-font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 #app {
 

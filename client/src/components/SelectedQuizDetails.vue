@@ -1,7 +1,7 @@
 <template lang="html">
-<div class="details-box">
-<h1>hey gurl hey</h1>
-</div>
+  <div class="details-box">
+    <h1>hey gurl hey</h1>
+  </div>
 </template>
 
 <script>
