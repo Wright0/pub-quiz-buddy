@@ -1,10 +1,12 @@
 <template lang="html">
+  <div>
+  <pub-quiz-details/>
   <div class="map-container">
     <GmapMap
     :center="center"
     :zoom="12"
     map-type-id="roadmap"
-    style= "height: 100vh"
+    style= "height: 100vh;"
     >
 
     <GmapMarker
@@ -18,11 +20,14 @@
   </GmapMap>
 
 </div>
+</div>
 
 </template>
 
 
 <script>
+
+import SelectedQuizDetails from './SelectedQuizDetails.vue'
 
 export default {
   name: 'pub-quiz-map',
@@ -45,10 +50,23 @@ export default {
         return markerList;
       }
     },
-    props : ["quizzes", "selectedDay"]
+    props : ["quizzes", "selectedDay"],
+    components: {
+      'pub-quiz-details': SelectedQuizDetails
+    }
   };
 
 </script>
 
 <style lang="css" scoped>
+
+div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.map-container{
+  width:100%;
+}
 </style>
