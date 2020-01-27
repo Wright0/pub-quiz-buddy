@@ -27,22 +27,22 @@
 export default {
   name: 'pub-quiz-map',
   data() {
-      return {
-        center: { lat: 55.950790, lng: -3.195131 },
-        selectedPubId: "" //Set on @click of a marker
+    return {
+      center: { lat: 55.950790, lng: -3.195131 },
+      selectedPubId: "", //Set on @click of a marker,
       }
     },
     computed: {
       markers(){
-        // do some stuff.
-        // Make it look like this:
-        // {id: 74832798,
-        // position: { lat: 55.950790, lng: -3.195131 }},
-        // {id: 7483274832,
-        // position: { lat: 55.952684, lng: -3.193455 }}
-      },
-      selectedPubQuiz(selectedPubId){
-        // created by finding matching id (quiz._id and the id being passed in (selected Pub ID))
+        const markerList = [
+          {id: 74832798,
+            position: { lat: 55.950790, lng: -3.195131 }
+          },
+          {id: 74832798,
+            position: { lat: 55.950790, lng: -3.193455 }
+          }
+        ]
+        return markerList;
       }
     },
     props : ["Quizzes", "SelectedDay"]
