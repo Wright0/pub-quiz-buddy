@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
     <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
+
     <div class="map-container">
       <GmapMap
       :center="center"
@@ -18,8 +19,8 @@
       @click="handleMarkerClick(marker.id)"
       />
     </GmapMap>
-
   </div>
+
 </div>
 
 </template>
@@ -41,13 +42,22 @@ export default {
     markers: function(){
       const markerList = [];
 
-      this.selectedDayQuizzes.forEach(quiz => {
-        const marker = {
-          id: quiz._id,
-          position: { lat: quiz.location.lat, lng: quiz.location.lng}
-        }
-        markerList.push(marker)
-      })
+      const showMarkers = function(array){
+        array.forEach(quiz => {
+          const marker = {
+            id: quiz._id,
+            position: { lat: quiz.location.lat, lng: quiz.location.lng}
+          }
+          markerList.push(marker)
+        })
+      }
+
+      if (this.selectedDayQuizzes){
+        showMarkers(this.selectedDayQuizzes)
+      } else {
+        showMarkers(this.quizzes)
+      };
+
       return markerList;
     }
   },

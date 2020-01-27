@@ -21,7 +21,7 @@ export default {
     return {
       quizzes: [], //result of a fetch
       selectedDay: "", //passed up from DayFilterListItem
-      selectedDayQuizzes: []
+      selectedDayQuizzes: null
     }
   },
   components: {
