@@ -20,25 +20,31 @@ export default {
   name: 'app',
   data(){
     return {
-      quizzes: [],//result of a fetch - will have the DB seeds. Mounted?,
-      selectedDay: "", //will populate with an event bus from DayFilter
+      quizzes: [], //result of a fetch
+      selectedDay: "", //passed up from DayFilterListItem
+      selectedDayQuizzes: []
     }
   },
   components: {
     'day-filter': DayFilter,
     'pub-quiz-map': PubQuizMap
   },
-  mounted(){
-    this.fetchQuizzes()
-
-    eventBus.$on('selected-day', dayClicked => this.selectedDay = dayClicked)
-  },
   methods: {
     fetchQuizzes(){
       PubQuizzesService.getQuizzes()
       .then(fetchedQuizzes => this.quizzes = fetchedQuizzes)
     }
-  }
+  },
+  mounted(){
+    this.fetchQuizzes()
+
+    eventBus.$on('selected-day', stringOfDayClicked => {
+      this.selectedDay = stringOfDayClicked;
+
+      PubQuizzesService.getQuizzesByDay(this.selectedDay)
+      .then(fetchedQuizzes => this.selectedDayQuizzes = fetchedQuizzes)
+      })
+  },
 }
 </script>
 

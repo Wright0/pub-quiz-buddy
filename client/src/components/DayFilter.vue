@@ -14,8 +14,7 @@ export default {
   name: 'days-filter',
   data(){
     return {
-      selectedDay: "",
-      daysOfTheWeek: ["All Quizzes", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+      daysOfTheWeek: ["All Quizzes", "monday", "tuesday", "wednesday", "thursday", "friday"]
     }
   },
   components: {
