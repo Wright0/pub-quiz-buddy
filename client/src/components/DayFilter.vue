@@ -1,12 +1,15 @@
 <template>
   <nav class="days-nav">
     <ul>
-      <li v-for="day in daysOfTheWeek" v-model="selectedDay" @click="sendSelectedDay">{{day}}</li>
+      <day-filter-list-item v-for="day in daysOfTheWeek" :day="day"/>
     </ul>
   </nav>
 </template>
 
 <script>
+
+import DayFilterListItem from './DayFilterListItem.vue'
+
 export default {
   name: 'days-filter',
   data(){
@@ -15,11 +18,8 @@ export default {
       daysOfTheWeek: ["All Quizzes", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
     }
   },
-  methods: {
-    sendSelectedDay(){
-      eventBus.$emit('selected-day', day);
-
-    }
+  components: {
+    'day-filter-list-item': DayFilterListItem
   }
 }
 </script>
@@ -40,15 +40,6 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-li {
-  margin: 0px 20px;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1.3em;
-  cursor: pointer;
 }
 
 </style>
