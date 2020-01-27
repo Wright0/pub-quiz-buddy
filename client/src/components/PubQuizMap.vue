@@ -52,7 +52,9 @@ export default {
         })
       }
 
-      if (this.selectedDayQuizzes){
+      if (this.selectedDay === "All Quizzes"){
+        showMarkers(this.quizzes)
+      } else if (this.selectedDayQuizzes) {
         showMarkers(this.selectedDayQuizzes)
       } else {
         showMarkers(this.quizzes)
