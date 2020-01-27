@@ -15,7 +15,7 @@ MongoClient.connect('mongodb://localhost:27017')
     const db = client.db('quizBuddy');
     const pubQuizzesCollection = db.collection('pubQuizzes');
     const pubQuizzesRouter = createRouter(pubQuizzesCollection);
-    app.use('./api/pubQuizzes', pubQuizzesRouter);
+    app.use('/api/pubQuizzes/', pubQuizzesRouter);
   })
   .catch(console.err);
 
