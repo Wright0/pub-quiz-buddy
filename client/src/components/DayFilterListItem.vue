@@ -3,18 +3,14 @@
 </template>
 
 <script>
+import { eventBus } from '../main.js'
 
 export default {
   name: "day-filter-list-item",
-  data(){
-    return {
-      selectedDay: ""
-    }
-  },
   props: ["day"],
   methods: {
     handleClick(){
-      this.selectedDay = this.day
+      eventBus.$emit('selected-day', this.day)
     }
   }
 }

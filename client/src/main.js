@@ -3,6 +3,8 @@ import App from './App.vue'
 // require('dotenv').config()
 require('../key.js')
 
+export const eventBus = new Vue();
+
 Vue.config.productionTip = false
 import * as VueGoogleMaps from 'vue2-google-maps'
 

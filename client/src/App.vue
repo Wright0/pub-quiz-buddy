@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { eventBus } from './main.js'
 import DayFilter from './components/DayFilter.vue'
 import PubQuizMap from './components/PubQuizMap.vue'
 
@@ -25,6 +26,9 @@ export default {
   components: {
     'day-filter': DayFilter,
     'pub-quiz-map': PubQuizMap
+  },
+  mounted(){
+    eventBus.$on('selected-day', dayClicked => this.selectedDay = dayClicked)
   }
 }
 </script>
