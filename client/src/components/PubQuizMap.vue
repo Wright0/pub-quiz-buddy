@@ -34,31 +34,37 @@ export default {
   data() {
     return {
       center: { lat: 55.950790, lng: -3.195131 },
-      selectedPubId: "",
-      selectedDayObjects: []
+      selectedPubId: ""
       }
     },
     computed: {
-      // markers(){
-      //   const markerList = []
-      //   for day in selectedDayObjects
-      //   marker = {
-      //     id: day._id,
-      //     position: { lat: day.position.lat, lng: day.position.lng}
-      //   }
-      //   markerList.push(marker)
-      //
-      //   [
-      //     {id: 74832798,
-      //       position: { lat: 55.950790, lng: -3.195131 }
-      //     },
-      //     {id: 74832798,
-      //       position: { lat: 55.950790, lng: -3.193455 }
-      //     }
-      //   ]
-      //   return markerList;
-      // }
+      selectedDayObjects: function(){
+        PubQuizzesService.getQuizzesByDay(this.selectedDay)
+        .then(fetchedDayObjects => fetchedDayObjects)
+      },
+      markers: function(){
+        const markerList = [];
+
+        this.quizzes.forEach(quiz => {
+          const marker = {
+            id: quiz._id,
+            position: { lat: quiz.location.lat, lng: quiz.location.lng}
+          }
+          markerList.push(marker)
+        })
+        return markerList;
+      }
     },
+
+        // [
+        //   {id: 74832798,
+        //     position: { lat: 55.950790, lng: -3.195131 }
+        //   },
+        //   {id: 74832798,
+        //     position: { lat: 55.950790, lng: -3.193455 }
+        //   }
+        // ]
+
     props : ["quizzes", "selectedDay"],
     components: {
       'pub-quiz-details': SelectedQuizDetails

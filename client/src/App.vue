@@ -5,13 +5,14 @@
       <p>slogan can go here</p>
     </nav>
     <day-filter/>
-    <pub-quiz-map :selectedDay="selectedDay"/>
+    <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes"/>
 
   </div>
 </template>
 
 <script>
 import { eventBus } from './main.js'
+import PubQuizzesService from './services/PubQuizzesService.js'
 import DayFilter from './components/DayFilter.vue'
 import PubQuizMap from './components/PubQuizMap.vue'
 
@@ -28,7 +29,15 @@ export default {
     'pub-quiz-map': PubQuizMap
   },
   mounted(){
+    this.fetchQuizzes()
+
     eventBus.$on('selected-day', dayClicked => this.selectedDay = dayClicked)
+  },
+  methods: {
+    fetchQuizzes(){
+      PubQuizzesService.getQuizzes()
+      .then(fetchedQuizzes => this.quizzes = fetchedQuizzes)
+    }
   }
 }
 </script>

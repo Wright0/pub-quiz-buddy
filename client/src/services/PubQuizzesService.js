@@ -4,7 +4,7 @@ export default {
   getQuizzes() {
     return fetch(baseURL)
       .then(res => res.json())
-  }
+  },
 
   getQuizzesByDay(day) {
     return fetch(`${baseURL}/day/${day}`)
