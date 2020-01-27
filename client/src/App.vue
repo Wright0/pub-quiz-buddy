@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <h1>Quiz Buddy buddy</h1>
-    <days-filter />
+    <day-filter />
     <pub-quiz-map/>
 
   </div>
@@ -18,21 +17,25 @@ export default {
       quizzes: [],//result of a fetch - will have the DB seeds. Mounted?,
       selectedDay: "" //will populate with an event bus from DayFilter
     }
-  }
+  },
   components: {
     'day-filter': DayFilter,
-    'map': PubQuizMap
+    'pub-quiz-map': PubQuizMap
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quattrocento', serif;
+font-family: 'Oswald', sans-serif;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>

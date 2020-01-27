@@ -1,11 +1,10 @@
-
 <template lang="html">
-  <div class="">
+  <div class="map-container">
     <GmapMap
     :center="center"
     :zoom="12"
     map-type-id="roadmap"
-    style="width: 600px; height: 400px"
+    style= "height: 100vh"
     >
 
     <GmapMarker
