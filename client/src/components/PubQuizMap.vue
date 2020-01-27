@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       center: { lat: 55.950790, lng: -3.195131 },
-      selectedPubId: "", //Set on @click of a marker,
+      selectedPubId: ""
       }
     },
     computed: {

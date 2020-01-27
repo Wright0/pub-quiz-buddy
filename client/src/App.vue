@@ -5,7 +5,7 @@
       <p>slogan can go here</p>
     </nav>
     <day-filter/>
-    <pub-quiz-map/>
+    <pub-quiz-map :selectedDay="selectedDay"/>
 
   </div>
 </template>
