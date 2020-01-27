@@ -1,9 +1,8 @@
 <template>
-  <nav class="cont">
-    <h1>PUB QUIZ BUDDY</h1>
-    <p>slogan can go here</p>
-
-
+  <nav class="days-nav">
+    <ul>
+      <li v-for="day in daysOfTheWeek" v-model="selectedDay" @click="sendSelectedDay">{{day}}</li>
+    </ul>
   </nav>
 </template>
 
@@ -12,7 +11,14 @@ export default {
   name: 'days-filter',
   data(){
     return {
-      selectedDay: "" // Is the result of clicking a day. Send it to App through an event bus at some point.
+      selectedDay: "",
+      daysOfTheWeek: ["All Quizzes", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    }
+  },
+  methods: {
+    sendSelectedDay(){
+      eventBus.$emit('selected-day', day);
+
     }
   }
 }
@@ -20,24 +26,29 @@ export default {
 
 
 <style scoped>
-.cont {
+.days-nav {
   width: 100%;
-  background: black;
+  background: grey;
   /* z-index: 1; */
-  color: white;
-  text-align:center;
+  color: black;
 }
 
-h1 {
-  margin: 0;
+ul {
+  margin: 0px auto;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-p {
-  margin: 0;
+li {
+  margin: 0px 20px;
   padding-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.7em;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 
 </style>

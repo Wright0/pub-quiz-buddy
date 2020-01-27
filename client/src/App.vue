@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <day-filter />
+    <nav class="cont">
+      <h1>PUB QUIZ BUDDY</h1>
+      <p>slogan can go here</p>
+    </nav>
+    <day-filter/>
     <pub-quiz-map/>
 
   </div>
@@ -15,7 +19,7 @@ export default {
   data(){
     return {
       quizzes: [],//result of a fetch - will have the DB seeds. Mounted?,
-      selectedDay: "" //will populate with an event bus from DayFilter
+      selectedDay: "", //will populate with an event bus from DayFilter
     }
   },
   components: {
@@ -37,5 +41,26 @@ font-family: 'Oswald', sans-serif;
 }
 #app {
 
+}
+
+.cont {
+  width: 100%;
+  background: black;
+  /* z-index: 1; */
+  color: white;
+  text-align:center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
 }
 </style>
