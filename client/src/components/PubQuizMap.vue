@@ -34,21 +34,30 @@ export default {
   data() {
     return {
       center: { lat: 55.950790, lng: -3.195131 },
-      selectedPubId: ""
+      selectedPubId: "",
+      selectedDayObjects: []
       }
     },
     computed: {
-      markers(){
-        const markerList = [
-          {id: 74832798,
-            position: { lat: 55.950790, lng: -3.195131 }
-          },
-          {id: 74832798,
-            position: { lat: 55.950790, lng: -3.193455 }
-          }
-        ]
-        return markerList;
-      }
+      // markers(){
+      //   const markerList = []
+      //   for day in selectedDayObjects
+      //   marker = {
+      //     id: day._id,
+      //     position: { lat: day.position.lat, lng: day.position.lng}
+      //   }
+      //   markerList.push(marker)
+      //
+      //   [
+      //     {id: 74832798,
+      //       position: { lat: 55.950790, lng: -3.195131 }
+      //     },
+      //     {id: 74832798,
+      //       position: { lat: 55.950790, lng: -3.193455 }
+      //     }
+      //   ]
+      //   return markerList;
+      // }
     },
     props : ["quizzes", "selectedDay"],
     components: {
