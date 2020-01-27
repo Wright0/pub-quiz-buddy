@@ -34,8 +34,7 @@ export default {
   data() {
     return {
       center: { lat: 55.950790, lng: -3.195131 },
-      selectedPubId: "",
-
+      selectedPubId: ""
       }
     },
     computed: {
@@ -46,7 +45,7 @@ export default {
       markers: function(){
         const markerList = [];
 
-        this.quizzes.forEach(quiz => {
+        this.selectedDayQuizzes.forEach(quiz => {
           const marker = {
             id: quiz._id,
             position: { lat: quiz.location.lat, lng: quiz.location.lng}
@@ -56,17 +55,7 @@ export default {
         return markerList;
       }
     },
-
-        // [
-        //   {id: 74832798,
-        //     position: { lat: 55.950790, lng: -3.195131 }
-        //   },
-        //   {id: 74832798,
-        //     position: { lat: 55.950790, lng: -3.193455 }
-        //   }
-        // ]
-
-    props : ["quizzes", "selectedDay"],
+    props : ["quizzes", "selectedDay", "selectedDayQuizzes"],
     components: {
       'pub-quiz-details': SelectedQuizDetails
     }
