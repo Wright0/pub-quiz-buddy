@@ -6,7 +6,6 @@
     </nav>
     <day-filter/>
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
-
   </div>
 </template>
 
@@ -57,6 +56,7 @@ body {
   padding: 0;
   font-family: 'Quattrocento', serif;
   font-family: 'Oswald', sans-serif;
+  background-color: white;
 }
 
 .cont {

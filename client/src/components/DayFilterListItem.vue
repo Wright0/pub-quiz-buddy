@@ -1,5 +1,6 @@
 <template lang="html">
   <li :value="day" @click="handleClick()">{{day}}</li>
+  <!-- Something like this for class: :class="day === monday ? standard : active" -->
 </template>
 
 <script>
@@ -10,7 +11,7 @@ export default {
   props: ["day"],
   methods: {
     handleClick(){
-      eventBus.$emit('selected-day', this.day)
+      eventBus.$emit('selected-day', this.day);
     }
   }
 }
@@ -26,4 +27,9 @@ li {
   font-size: 1.3em;
   cursor: pointer;
 }
+
+li:hover {
+  background-color: green;
+}
+
 </style>

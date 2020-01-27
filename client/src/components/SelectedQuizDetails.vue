@@ -28,7 +28,7 @@ export default {
 
 <style lang="css" scoped>
 
-.details-box{
+.details-box {
   margin: 20px;
   display: flex;
   flex-direction: column;

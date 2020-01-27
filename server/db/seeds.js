@@ -21,7 +21,7 @@ db.pubQuizzes.insertMany([
     location: { lat: 55.951940, lng: -3.202796}
   },
   {
-    pub: "ARgyle Bar",
+    pub: "Argyle Bar",
     address: "Argyle Place",
     day: "monday",
     time: 2100,

@@ -4,7 +4,7 @@
     <div class="map-container">
       <GmapMap
       :center="center"
-      :zoom="12"
+      :zoom="14"
       map-type-id="roadmap"
       style= "height: 100vh;"
       >
