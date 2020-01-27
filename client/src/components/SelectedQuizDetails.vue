@@ -9,11 +9,15 @@
       <dt>Time:</dt>
       <dd>{{ selectedQuiz.time }}</dd>
     </dl>
+    <button @click="closeDetailWindow">close</button>
 
   </div>
 </template>
 
 <script>
+
+import { eventBus } from '../main.js'
+
 export default {
   name: 'pub-quiz-details',
   props: ["quizId", "quizzes"],
@@ -21,6 +25,11 @@ export default {
     selectedQuiz: function(){
       const quizSelected = this.quizzes.find(quiz => quiz._id === this.quizId);
       return quizSelected;
+    }
+  },
+  methods: {
+    closeDetailWindow(){
+      eventBus.$emit('close-info-window');
     }
   }
 }

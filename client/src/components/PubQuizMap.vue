@@ -16,6 +16,7 @@
       :position="marker.position"
       :clickable="true"
       :draggable="false"
+      icon="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
       @click="handleMarkerClick(marker.id)"
       />
     </GmapMap>
@@ -29,6 +30,7 @@
 <script>
 
 import SelectedQuizDetails from './SelectedQuizDetails.vue'
+import { eventBus } from '../main.js'
 
 export default {
   name: 'pub-quiz-map',
@@ -68,6 +70,11 @@ export default {
     handleMarkerClick(id){
       this.selectedPubId = id
     }
+  },
+  mounted(){
+    eventBus.$on('close-info-window', () => {
+      this.selectedPubId = null;
+    })
   },
   components: {
     'pub-quiz-details': SelectedQuizDetails
