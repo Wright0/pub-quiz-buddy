@@ -1,13 +1,11 @@
 <template lang="html">
   <div>
-    <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
-
     <div class="map-container">
+      <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
       <GmapMap
       :center="mapCenter"
       :zoom="14"
       map-type-id="roadmap"
-      style= "height: 100vh;"
       >
 
       <GmapMarker
@@ -17,7 +15,7 @@
       :clickable="true"
       :draggable="false"
 
-      
+
       @click="handleMarkerClick(marker.id)"
       />
     </GmapMap>
@@ -95,7 +93,8 @@ div {
   width: 100%;
 }
 
-.map-container{
+.vue-map-container{
   width:100%;
+  height: 100vh;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="cont">
-      <h1>PUB QUIZ BUDDY</h1>
+      <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
       <p>slogan can go here</p>
     </nav>
     <day-filter/>
@@ -78,5 +78,10 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
+}
+
+.logo-link{
+  text-decoration: none;
+  color: white;
 }
 </style>
