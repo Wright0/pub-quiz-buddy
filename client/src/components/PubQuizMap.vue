@@ -4,7 +4,7 @@
 
     <div class="map-container">
       <GmapMap
-      :center="center"
+      :center="mapCenter"
       :zoom="14"
       map-type-id="roadmap"
       style= "height: 100vh;"
@@ -16,7 +16,8 @@
       :position="marker.position"
       :clickable="true"
       :draggable="false"
-      icon="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+
+      
       @click="handleMarkerClick(marker.id)"
       />
     </GmapMap>
@@ -36,7 +37,7 @@ export default {
   name: 'pub-quiz-map',
   data() {
     return {
-      center: { lat: 55.950790, lng: -3.195131 },
+      mapCenter: { lat: 55.950790, lng: -3.195131 },
       selectedPubId: ""
     }
   },
@@ -73,6 +74,10 @@ export default {
   },
   mounted(){
     eventBus.$on('close-info-window', () => {
+      this.selectedPubId = null;
+    })
+
+    eventBus.$on('selected-day', () => {
       this.selectedPubId = null;
     })
   },
