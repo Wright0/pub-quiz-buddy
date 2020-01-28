@@ -1,24 +1,16 @@
 <template lang="html">
   <div>
-    <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
-
     <div class="map-container">
+      <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
       <GmapMap
-      :center="center"
-      :zoom="14"
+      :center="mapCenter"
+      :zoom="13.5"
       map-type-id="roadmap"
-      style= "height: 100vh;"
       >
 
-      <GmapMarker
-      :key="index"
-      v-for="(marker, index) in markers"
-      :position="marker.position"
-      :clickable="true"
-      :draggable="false"
-      icon="http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-      @click="handleMarkerClick(marker.id)"
-      />
+      <marker-pin v-for="(marker, index) in markers"
+      :marker="marker"
+      :index="index"/>
     </GmapMap>
   </div>
 
@@ -30,13 +22,14 @@
 <script>
 
 import SelectedQuizDetails from './SelectedQuizDetails.vue'
+import MarkerPin from './MarkerPin.vue'
 import { eventBus } from '../main.js'
 
 export default {
   name: 'pub-quiz-map',
   data() {
     return {
-      center: { lat: 55.950790, lng: -3.195131 },
+      mapCenter: { lat: 55.950790, lng: -3.195131 },
       selectedPubId: ""
     }
   },
@@ -66,18 +59,22 @@ export default {
     }
   },
   props : ["quizzes", "selectedDay", "selectedDayQuizzes"],
-  methods: {
-    handleMarkerClick(id){
-      this.selectedPubId = id
-    }
-  },
   mounted(){
     eventBus.$on('close-info-window', () => {
       this.selectedPubId = null;
     })
+
+    eventBus.$on('selected-day', () => {
+      this.selectedPubId = null;
+    })
+
+    eventBus.$on('marker-clicked', id => {
+      this.selectedPubId = id
+    })
   },
   components: {
-    'pub-quiz-details': SelectedQuizDetails
+    'pub-quiz-details': SelectedQuizDetails,
+    'marker-pin': MarkerPin
   }
 };
 </script>
@@ -90,7 +87,8 @@ div {
   width: 100%;
 }
 
-.map-container{
+.vue-map-container{
   width:100%;
+  height: 100vh;
 }
 </style>
