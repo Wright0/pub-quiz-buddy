@@ -1,24 +1,31 @@
 <template>
   <nav class="days-nav">
     <ul>
-      <day-filter-list-item v-for="day in daysOfTheWeek" :day="day"/>
+      <day-filter-list-item v-for="day in daysOfTheWeek" :day="day" :isSelectedProp="selectedDay === day" />
     </ul>
   </nav>
 </template>
 
 <script>
 
+import { eventBus } from '../main.js'
 import DayFilterListItem from './DayFilterListItem.vue'
 
 export default {
   name: 'days-filter',
   data(){
     return {
-      daysOfTheWeek: ["All Quizzes", "monday", "tuesday", "wednesday", "thursday", "friday"]
+      daysOfTheWeek: ["All Quizzes", "monday", "tuesday", "wednesday", "thursday", "friday"],
+      selectedDay: null
     }
   },
   components: {
     'day-filter-list-item': DayFilterListItem
+  },
+  mounted() {
+  eventBus.$on('selected-day', selectedDay => {
+    this.selectedDay = selectedDay
+  })
   }
 }
 </script>
