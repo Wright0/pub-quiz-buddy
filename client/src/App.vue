@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="cont">
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
-      <p>slogan can go here</p>
+      <p>"I would totally use this"</p>
     </nav>
     <day-filter/>
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
