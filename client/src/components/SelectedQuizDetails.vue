@@ -8,6 +8,9 @@
       <dd>{{ selectedQuiz.prize }}</dd>
       <dt>Time:</dt>
       <dd>{{ selectedQuiz.time }}</dd>
+      <dt>Student Discount: </dt>
+      <dd v-if="selectedQuiz.studentDiscount === true">Yes</dd>
+      <dd v-else="selectedQuiz.studentDiscount  === false">No</dd>
     </dl>
     <button @click="closeDetailWindow">close</button>
 
