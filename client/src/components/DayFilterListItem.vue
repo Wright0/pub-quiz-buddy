@@ -1,5 +1,6 @@
 <template lang="html">
-  <li :value="day" @click="handleClick()">{{day}}</li>
+  <li class='div' :style='{"text-decoration" : (isSelectedProp? "underline" : "none" )}'
+  :value="day" @click="handleClick()">{{day}}</li>
   <!-- Something like this for class: :class="day === monday ? standard : active" -->
 </template>
 
@@ -8,13 +9,13 @@ import { eventBus } from '../main.js'
 
 export default {
   name: "day-filter-list-item",
-  props: ["day"],
+  props: ["day", "isSelectedProp"],
   methods: {
     handleClick(){
       eventBus.$emit('selected-day', this.day);
+      }
     }
   }
-}
 </script>
 
 <style lang="css" scoped>
