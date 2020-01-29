@@ -2,7 +2,6 @@
   <div id="app">
     <nav class="cont">
       <add-pub-form v-if="showModal" class="add-pub-form" />
-      <!-- SHould I pass the v-if down as a prop or the I thing here? -->
       <i v-if="showModal" @click="hideForm">&#215;</i>
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
       <p>"I would totally use this"</p>
@@ -108,14 +107,15 @@ p {
 button.add-quiz {
     float: right;
     position: relative;
-    top: -52px;
+    top: -62px;
     background-color: black;
     left: -67px;
-    padding: 8px;
+    padding: 8px 19px;
     border-radius: 10px;
     color: white;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 1.2em;
+    font-family: inherit;
 }
 
 i {

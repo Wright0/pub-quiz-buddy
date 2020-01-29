@@ -21,23 +21,30 @@
   <div class="form-field">
     <div class=""></div>
     <label for="quiz">Day of Quiz</label>
-    <input type="text" v-model="day" name="quiz">
+    <select v-model="day">
+      <option name="day" value="monday">Monday</option>
+      <option name="day" value="tuesday">Tuesday</option>
+      <option name="day" value="wednesday">Wednesday</option>
+      <option name="day" value="thursday">Thursday</option>
+      <option name="day" value="friday">Friday</option>
+    </select>
     <div class=""></div>
   </div>
 
   <div class="form-field">
     <div class=""></div>
     <label for="time">Time of Quiz</label>
-    <input type="text" v-model="time" name="time">
+    <input type="time" v-model="time" name="time"
+       min="18:00" max="23:00" />
     <div class=""></div>
   </div>
 
   <div class="form-field">
     <div class=""></div>
     <label for="">Student Discount</label>
-    <div class="">
-      <input type="radio" v-model="studentDiscount" value="true">Yes<br>
-      <input type="radio" v-model="studentDiscount" value="false">No<br>
+    <div class="discount-radio-wrap">
+      <div><input type="radio" v-model="studentDiscount" value="true">Yes</input></div>
+      <div><input type="radio" v-model="studentDiscount" value="false">No</input></div>
     </div>
     <div class=""></div>
   </div>
@@ -141,6 +148,23 @@ components: {
 }
 .top-form-field {
   margin-top: 200px;
+}
+
+input[type="time"] {
+    width: 28%;
+}
+
+.discount-radio-wrap {
+  display: flex;
+}
+
+.discount-radio-wrap div {
+  width: 50%;
+  text-align: left;
+}
+
+.discount-radio-wrap input[type="radio"] {
+    margin: 0 10px;
 }
 
 </style>
