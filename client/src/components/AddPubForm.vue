@@ -35,7 +35,7 @@
   <div class="form-field">
     <div class=""></div>
     <label for="">Student Discount</label>
-    <div class="">
+    <div class="radio-buttons">
       <input type="radio" v-model="studentDiscount" value="true">Yes<br>
       <input type="radio" v-model="studentDiscount" value="false">No<br>
     </div>
@@ -129,8 +129,8 @@ components: {
 .add-pub-form, display-form {
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 700px;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
   z-index: 1;
 }
 
@@ -141,6 +141,10 @@ components: {
 }
 .top-form-field {
   margin-top: 200px;
+}
+
+label, .radio-buttons {
+  color: white;
 }
 
 </style>
