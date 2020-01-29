@@ -27,6 +27,7 @@ import { eventBus } from '../main.js'
 
 export default {
   name: 'pub-quiz-map',
+  props : ["quizzes", "selectedDay", "selectedDayQuizzes"],
   data() {
     return {
       mapCenter: { lat: 55.950790, lng: -3.195131 },
@@ -58,7 +59,6 @@ export default {
       return markerList;
     }
   },
-  props : ["quizzes", "selectedDay", "selectedDayQuizzes"],
   mounted(){
     eventBus.$on('close-info-window', () => {
       this.selectedPubId = null;

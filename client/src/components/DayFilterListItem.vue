@@ -1,5 +1,7 @@
 <template lang="html">
-  <li class='div' :style='{"text-decoration" : (isSelectedProp? "underline" : "none" )}'
+  <li class='nav-item' :style='{
+    "text-decoration" : (isSelectedProp ? "underline" : "none" ),
+    "color" : (isSelectedProp ? "#202020" : "#1c1c1c" )}'
   :value="day" @click="handleClick()">{{day}}</li>
   <!-- Something like this for class: :class="day === monday ? standard : active" -->
 </template>
@@ -29,8 +31,8 @@ li {
   cursor: pointer;
 }
 
-li:hover {
-  background-color: green;
+.nav-item:hover {
+  /* color: #2b2b2b; */
 }
 
 </style>
