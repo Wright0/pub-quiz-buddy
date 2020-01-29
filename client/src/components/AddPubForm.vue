@@ -1,20 +1,16 @@
 <template lang="html">
   <form action="index.html" v-on:submit="addPubQuiz" method="post">
-    <div class="top-form-field form-field">
-      <div class=""></div>
-      <label for="pub">Name of Pub</label>
-      <input type="text" v-model="pub" name="pub">
-      <div class=""></div>
-    </div>
 
-    <div class="form-field">
+    <div class="form-field top-form-field">
       <div class=""></div>
-      <label for="pub">Address</label>
+      <label for="pub">Pub</label>
       <input ref="autocomplete"
       placeholder="Search"
       class="search-location"
       onfocus="value = ''"
-      type="text" />
+      type="text"
+      country="gb"
+      />
       <div class=""></div>
     </div>
 
@@ -107,11 +103,12 @@ export default {
   mounted() {
     this.autocomplete = new google.maps.places.Autocomplete(
       (this.$refs.autocomplete),
-      {types: ['geocode']}
+      {types: ['establishment']}
     );
 
     this.autocomplete.addListener('place_changed', () => {
       let place = this.autocomplete.getPlace();
+      let pub = place.name
       let ac = place.address_components[0];
       let lat = place.geometry.location.lat();
       let lng = place.geometry.location.lng();
@@ -119,6 +116,8 @@ export default {
       this.address = place.formatted_address;
       this.location.lat = lat
       this.location.lng = lng
+      this.pub = pub
+      console.log(place);
     });
 
     const getAddressData = function (addressData, placeResultData, id) {
@@ -164,6 +163,7 @@ export default {
   .discount-radio-wrap div {
     width: 50%;
     text-align: left;
+    color: white;
   }
   .discount-radio-wrap input[type="radio"] {
       margin: 0 10px;
