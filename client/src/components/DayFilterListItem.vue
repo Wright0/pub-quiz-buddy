@@ -1,7 +1,7 @@
 <template lang="html">
   <li class='nav-item' :style='{
     "text-decoration" : (isSelectedProp ? "underline" : "none" ),
-    "color" : (isSelectedProp ? "#2b2b2b" : "#666666" )}'
+    "color" : (isSelectedProp ? "#e2e2e2" : "#aaaaaa" )}'
   :value="day" @click="handleClick()">{{day}}</li>
   <!-- Something like this for class: :class="day === monday ? standard : active" -->
 </template>
