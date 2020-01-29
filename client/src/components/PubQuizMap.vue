@@ -60,17 +60,11 @@ export default {
     }
   },
   mounted(){
-    eventBus.$on('close-info-window', () => {
-      this.selectedPubId = null;
-    })
+    eventBus.$on('close-info-window', () => this.selectedPubId = null)
 
-    eventBus.$on('selected-day', () => {
-      this.selectedPubId = null;
-    })
+    eventBus.$on('selected-day', () => this.selectedPubId = null)
 
-    eventBus.$on('marker-clicked', id => {
-      this.selectedPubId = id
-    })
+    eventBus.$on('marker-clicked', id => this.selectedPubId = id)
   },
   components: {
     'pub-quiz-details': SelectedQuizDetails,

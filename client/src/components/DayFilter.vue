@@ -19,13 +19,13 @@ export default {
       selectedDay: null
     }
   },
+  mounted() {
+    eventBus.$on('selected-day', selectedDay => {
+      this.selectedDay = selectedDay
+    })
+  },
   components: {
     'day-filter-list-item': DayFilterListItem
-  },
-  mounted() {
-  eventBus.$on('selected-day', selectedDay => {
-    this.selectedDay = selectedDay
-  })
   }
 }
 </script>

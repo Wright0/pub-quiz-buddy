@@ -1,20 +1,20 @@
 <template lang="html">
   <div v-if="quizId" class="details-box">
     <div id="pub-info-container">
-    <h1>{{ selectedQuiz.pub }}</h1>
-    <div class="details-inner-container">
-      <h2>Address:</h2>
-      <p>{{ selectedQuiz.address }}</p>
-    </div>
-    <div class="details-inner-container">
-      <h2>Prize:</h2>
-      <p>£{{ selectedQuiz.prize }}</p>
-    </div>
-    <div class="details-inner-container">
-      <h2>Time:</h2>
-      <p>{{ selectedQuiz.time }}</p>
-    </div>
-    <button class="close-button" @click="closeDetailWindow">CLOSE</button>
+      <h1>{{ selectedQuiz.pub }}</h1>
+      <div class="details-inner-container">
+        <h2>Address:</h2>
+        <p>{{ selectedQuiz.address }}</p>
+      </div>
+      <div class="details-inner-container">
+        <h2>Prize:</h2>
+        <p>£{{ selectedQuiz.prize }}</p>
+      </div>
+      <div class="details-inner-container">
+        <h2>Time:</h2>
+        <p>{{ selectedQuiz.time }}</p>
+      </div>
+      <button class="close-button" @click="closeDetailWindow">CLOSE</button>
     </div>
   </div>
 </template>
@@ -42,6 +42,25 @@ export default {
 
 <style lang="css" scoped>
 
+h1, h2 {
+  text-align: center;
+  color: #2b2b2b;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 18px;
+  color: #2b2b2b;
+  margin: auto;
+  padding: 0;
+  text-align:  center;
+  font-weight: bold;
+  letter-spacing: 0;
+}
+
 .details-box {
   padding: 20px;
   display: flex;
@@ -67,21 +86,10 @@ export default {
   background: #f12e12;
 }
 
-
 #pub-info-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
-
-h1, h2 {
-  text-align: center;
-  color: #2b2b2b;
-
-}
-
-h2 {
-  margin-bottom: 0;
 }
 
 .details-inner-container {
@@ -90,14 +98,4 @@ h2 {
   height:80px;
 }
 
-
-p {
-  font-size: 18px;
-  color: #2b2b2b;
-  margin: auto;
-  padding: 0;
-  text-align:  center;
-  font-weight: bold;
-  letter-spacing: 0;
-}
 </style>

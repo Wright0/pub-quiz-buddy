@@ -11,59 +11,52 @@
       <div class=""></div>
       <label for="pub">Address</label>
       <input ref="autocomplete"
-         placeholder="Search"
-         class="search-location"
-         onfocus="value = ''"
-         type="text" />
+      placeholder="Search"
+      class="search-location"
+      onfocus="value = ''"
+      type="text" />
       <div class=""></div>
     </div>
 
-  <div class="form-field">
-    <div class=""></div>
-    <label for="quiz">Day of Quiz</label>
-    <select v-model="day">
-      <option name="day" value="monday">Monday</option>
-      <option name="day" value="tuesday">Tuesday</option>
-      <option name="day" value="wednesday">Wednesday</option>
-      <option name="day" value="thursday">Thursday</option>
-      <option name="day" value="friday">Friday</option>
-    </select>
-    <div class=""></div>
-  </div>
-
-  <div class="form-field">
-    <div class=""></div>
-    <label for="time">Time of Quiz</label>
-    <input type="time" v-model="time" name="time"
-       min="18:00" max="23:00" />
-    <div class=""></div>
-  </div>
-
-  <div class="form-field">
-    <div class=""></div>
-    <label for="">Student Discount</label>
-    <div class="discount-radio-wrap">
-      <div><input type="radio" v-model="studentDiscount" value="true">Yes</input></div>
-      <div><input type="radio" v-model="studentDiscount" value="false">No</input></div>
+    <div class="form-field">
+      <div class=""></div>
+      <label for="quiz">Day of Quiz</label>
+      <input type="text" v-model="day" name="quiz">
+      <div class=""></div>
     </div>
-    <div class=""></div>
-  </div>
 
-  <div class="form-field">
-    <div class=""></div>
-    <label for="prize">Prize</label>
-    <input type="text" v-model="prize" name="prize">
-    <div class=""></div>
-  </div>
+    <div class="form-field">
+      <div class=""></div>
+      <label for="time">Time of Quiz</label>
+      <input type="text" v-model="time" name="time">
+      <div class=""></div>
+    </div>
 
-  <div class="form-field">
-    <div class=""></div>
-    <div class=""></div>
-    <input type="submit">
-    <div class=""></div>
-  </div>
+    <div class="form-field">
+      <div class=""></div>
+      <label for="">Student Discount</label>
+      <div class="radio-buttons">
+        <input type="radio" v-model="studentDiscount" value="true">Yes<br>
+        <input type="radio" v-model="studentDiscount" value="false">No<br>
+      </div>
+      <div class=""></div>
+    </div>
 
-</form>
+    <div class="form-field">
+      <div class=""></div>
+      <label for="prize">Prize</label>
+      <input type="text" v-model="prize" name="prize">
+      <div class=""></div>
+    </div>
+
+    <div class="form-field">
+      <div class=""></div>
+      <div class=""></div>
+      <input type="submit">
+      <div class=""></div>
+    </div>
+
+  </form>
 
 </template>
 
@@ -92,16 +85,15 @@ export default {
       {types: ['geocode']}
     );
     this.autocomplete.addListener('place_changed', () => {
-    let place = this.autocomplete.getPlace();
-    let ac = place.address_components[0];
-    let lat = place.geometry.location.lat();
-    let lng = place.geometry.location.lng();
+      let place = this.autocomplete.getPlace();
+      let ac = place.address_components[0];
+      let lat = place.geometry.location.lat();
+      let lng = place.geometry.location.lng();
 
-    this.address = place.formatted_address;
-    this.location.lat = lat
-    this.location.lng = lng
-
-});
+      this.address = place.formatted_address;
+      this.location.lat = lat
+      this.location.lng = lng
+    });
   },
   methods: {
     addPubQuiz(evt) {
@@ -114,7 +106,7 @@ export default {
         studentDiscount: this.studentDiscount,
         prize: this.prize,
         location: { lat: this.location.lat, lng: this.location.lng }
-        }
+      }
       PubQuizzesService.postPubQuiz(payload)
       .then( res => { eventBus.$emit('pub-quiz-added', res);
     })
@@ -123,10 +115,11 @@ export default {
     console.log(placeResultData);
     this.address = placeResultData.address_components.formatted_address;
   }
-},
-components: {
-   Places,
-},
+}
+// Is this component needed?
+// components: {
+//   Places,
+// },
 }
 </script>
 
@@ -137,7 +130,7 @@ components: {
   position: absolute;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  height: 700px;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -145,27 +138,13 @@ components: {
   display: grid;
   grid-template-columns: 31% 20% 18% 31%;
   margin-top: 10px;
-  color: white;
 }
 .top-form-field {
   margin-top: 200px;
 }
 
-input[type="time"] {
-    width: 28%;
-}
-
-.discount-radio-wrap {
-  display: flex;
-}
-
-.discount-radio-wrap div {
-  width: 50%;
-  text-align: left;
-}
-
-.discount-radio-wrap input[type="radio"] {
-    margin: 0 10px;
+label, .radio-buttons {
+  color: white;
 }
 
 </style>

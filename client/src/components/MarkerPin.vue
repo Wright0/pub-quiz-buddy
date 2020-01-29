@@ -1,15 +1,15 @@
 <template lang="html">
-    <GmapMarker
-      ref="marker"
-      :key="index"
-      :clickable="true"
-      :draggable="false"
-      :animation="0"
-      :position="marker.position"
-      @click="handleMarkerClick(marker.id)"
-      @mouseover="bounceOnHover"
-      @mouseout="mouseOffMarker"
-    />
+  <GmapMarker
+  ref="marker"
+  :key="index"
+  :clickable="true"
+  :draggable="false"
+  :animation="0"
+  :position="marker.position"
+  @click="handleMarkerClick(marker.id)"
+  @mouseover="bounceOnHover"
+  @mouseout="mouseOffMarker"
+  />
 </template>
 
 <script>
@@ -18,6 +18,7 @@ import { eventBus } from '../main.js'
 
 export default {
   name: 'marker-pin',
+  props: ['marker', 'index'],
   data(){
     return {
       active: false
@@ -48,8 +49,7 @@ export default {
     eventBus.$on('marker-clicked', this.stopBounce);
     eventBus.$on('selected-day', () => this.stopBounce);
     eventBus.$on('close-info-window', this.stopBounce);
-  },
-  props: ['marker', 'index']
+  }
 }
 </script>
 

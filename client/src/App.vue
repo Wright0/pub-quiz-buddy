@@ -41,7 +41,7 @@ export default {
       .then(fetchedQuizzes => this.quizzes = fetchedQuizzes)
     },
     displayForm(event){
-       this.showModal = true;
+      this.showModal = true;
     },
     hideForm(event) {
       this.showModal = false;
@@ -105,17 +105,17 @@ p {
 }
 
 button.add-quiz {
-    float: right;
-    position: relative;
-    top: -62px;
-    background-color: black;
-    left: -67px;
-    padding: 8px 19px;
-    border-radius: 10px;
-    color: white;
-    font-weight: 400;
-    font-size: 1.2em;
-    font-family: inherit;
+  float: right;
+  position: relative;
+  top: -62px;
+  background-color: black;
+  left: -67px;
+  padding: 8px 19px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-family: inherit;
 }
 
 i {
@@ -133,6 +133,5 @@ i {
   text-decoration: none;
   color: #e2e2e2
 }
-
 
 </style>
