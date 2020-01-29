@@ -30,11 +30,6 @@ export default {
       showModal: false // If this is true then the component displays??
     }
   },
-  components: {
-    'day-filter': DayFilter,
-    'pub-quiz-map': PubQuizMap,
-    'add-pub-form': AddPubForm
-  },
   methods: {
     fetchQuizzes(){
       PubQuizzesService.getQuizzes()
@@ -62,6 +57,11 @@ export default {
 
     eventBus.$on('pub-quiz-added', () => this.showModal = false)
   },
+  components: {
+    'day-filter': DayFilter,
+    'pub-quiz-map': PubQuizMap,
+    'add-pub-form': AddPubForm
+  }
 }
 </script>
 

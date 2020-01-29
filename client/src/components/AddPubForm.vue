@@ -79,22 +79,6 @@ export default {
       location: { lat: 0, lng: 0 }
     }
   },
-  mounted() {
-    this.autocomplete = new google.maps.places.Autocomplete(
-      (this.$refs.autocomplete),
-      {types: ['geocode']}
-    );
-    this.autocomplete.addListener('place_changed', () => {
-      let place = this.autocomplete.getPlace();
-      let ac = place.address_components[0];
-      let lat = place.geometry.location.lat();
-      let lng = place.geometry.location.lng();
-
-      this.address = place.formatted_address;
-      this.location.lat = lat
-      this.location.lng = lng
-    });
-  },
   methods: {
     addPubQuiz(evt) {
       evt.preventDefault();
@@ -110,6 +94,22 @@ export default {
       PubQuizzesService.postPubQuiz(payload)
       .then( res => { eventBus.$emit('pub-quiz-added', res);
     })
+  },
+  mounted() {
+    this.autocomplete = new google.maps.places.Autocomplete(
+      (this.$refs.autocomplete),
+      {types: ['geocode']}
+    );
+    this.autocomplete.addListener('place_changed', () => {
+      let place = this.autocomplete.getPlace();
+      let ac = place.address_components[0];
+      let lat = place.geometry.location.lat();
+      let lng = place.geometry.location.lng();
+
+      this.address = place.formatted_address;
+      this.location.lat = lat
+      this.location.lng = lng
+    });
   },
   getAddressData: function (addressData, placeResultData, id) {
     console.log(placeResultData);
