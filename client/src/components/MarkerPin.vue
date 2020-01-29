@@ -20,7 +20,7 @@ export default {
   name: 'marker-pin',
   data(){
     return {
-      active: true
+      active: false
     }
   },
   methods: {
