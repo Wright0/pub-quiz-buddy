@@ -5,6 +5,7 @@
       <p>"I would totally use this"</p>
     </nav>
     <day-filter/>
+    <!-- <additional-filters> -->
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
   </div>
 </template>
@@ -49,7 +50,6 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap');
-
 
 body {
   margin: 0;
