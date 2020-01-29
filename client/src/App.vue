@@ -55,7 +55,12 @@ export default {
 
       PubQuizzesService.getQuizzesByDay(this.selectedDay)
       .then(fetchedQuizzes => this.selectedDayQuizzes = fetchedQuizzes)
+
+      eventBus.$on('pub-quiz-added', quiz =>
+      this.quizzes.push(quiz))
     })
+
+    eventBus.$on('pub-quiz-added', () => this.showModal = false)
   },
 }
 </script>
