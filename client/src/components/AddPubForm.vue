@@ -1,8 +1,7 @@
 <template lang="html">
   <form action="index.html" v-on:submit="addPubQuiz" method="post">
+    <div class="form">
 
-    <div class="form-field top-form-field">
-      <div class=""></div>
       <label for="pub">Pub</label>
       <input ref="autocomplete"
       placeholder="Search"
@@ -11,11 +10,7 @@
       type="text"
       country="gb"
       />
-      <div class=""></div>
-    </div>
 
-    <div class="form-field">
-      <div class=""></div>
       <label for="quiz">Day of Quiz</label>
       <select v-model="day">
         <option name="day" value="monday">Monday</option>
@@ -24,39 +19,22 @@
         <option name="day" value="thursday">Thursday</option>
         <option name="day" value="friday">Friday</option>
       </select>
-      <div class=""></div>
-    </div>
 
-    <div class="form-field">
-      <div class=""></div>
       <label for="time">Time of Quiz</label>
       <input type="time" v-model="time" name="time"
-       min="18:00" max="23:00" />
-      <div class=""></div>
-    </div>
+      min="18:00" max="23:00" />
 
-    <div class="form-field">
-      <div class=""></div>
       <label for="">Student Discount</label>
       <div class="discount-radio-wrap">
-        <div><input type="radio" v-model="studentDiscount" value="true">Yes</input></div>
-        <div><input type="radio" v-model="studentDiscount" value="false">No</input></div>
+        <input type="radio" v-model="studentDiscount" value="true">Yes</input>
+        <input type="radio" v-model="studentDiscount" value="false">No</input>
       </div>
-      <div class=""></div>
-    </div>
 
-    <div class="form-field">
-      <div class=""></div>
       <label for="prize">Prize</label>
       <input type="text" v-model="prize" name="prize">
-      <div class=""></div>
-    </div>
 
-    <div class="form-field">
-      <div class=""></div>
-      <div class=""></div>
       <input type="submit">
-      <div class=""></div>
+
     </div>
 
   </form>
@@ -67,7 +45,6 @@
 import PubQuizzesService from '../services/PubQuizzesService.js'
 import { eventBus } from '../main'
 import Places from 'vue-places';
-
 
 export default {
   name:'add-pub-form',
@@ -126,12 +103,15 @@ export default {
   },
   components: {
     Places
-  },
+  }
 }
 </script>
 
 <style lang="css" scoped>
 
+  p {
+
+  }
   .add-pub-form, display-form {
     position: absolute;
     width: 100%;
@@ -140,30 +120,56 @@ export default {
     z-index: 1;
   }
 
-  .form-field {
+  .form {
     display: grid;
-    grid-template-columns: 31% 20% 18% 31%;
-    margin-top: 10px;
-  }
-  .top-form-field {
-    margin-top: 200px;
+    grid-template-columns: 3fr 1fr 1fr 3fr ;
+    margin-top: 5%;
+    font-size: 1.3em;
   }
 
   label {
+    margin: 8px 0;
+    display: grid;
+    grid-column: 2/3;
     color: white;
+    align-self: center;
+  }
+
+  input {
+    margin: 8px 0;
+    display: grid;
+    grid-column: 3/4;
+    align-self: center;
+    font-size: 0.9em;
+  }
+
+  select {
+    align-self: center;
+    font-size: 0.9em;
   }
 
   input[type="time"] {
-    width: 28%;
+    width: 30%;
+    font-size: 1em;
+  }
+
+  input[type="submit"]{
+    background-color: #2b2b2b;
+    color: #e2e2e2;
+    border-radius: 5px;
+    font-size: 0.8em;
+    border: 1px solid #e2e2e2;
   }
 
   .discount-radio-wrap {
     display: flex;
+    color: white;
+    align-self: center;
   }
+
   .discount-radio-wrap div {
     width: 50%;
     text-align: left;
-    color: white;
   }
   .discount-radio-wrap input[type="radio"] {
       margin: 0 10px;
