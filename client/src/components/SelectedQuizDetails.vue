@@ -8,8 +8,11 @@
       <dd>{{ selectedQuiz.prize }}</dd>
       <dt>Time:</dt>
       <dd>{{ selectedQuiz.time }}</dd>
+      <dt>Student Discount: </dt>
+      <dd v-if="selectedQuiz.studentDiscount === true">Yes</dd>
+      <dd v-else="selectedQuiz.studentDiscount  === false">No</dd>
     </dl>
-    <button class="close-button" @click="closeDetailWindow">CLOSE <i class="fas fa-times"></i></button>
+    <button @click="closeDetailWindow">close</button>
 
   </div>
 </template>
@@ -44,24 +47,5 @@ export default {
   height: 100vh;
   width: 400px;
 }
-
-.close-button {
-  width: 100px;
-  height: 30px;
-  background: #dd270d;
-  color: white;
-cursor: pointer;
-margin: 0 auto;
-}
-
-.close-button:focus{
-  outline: none;
-}
-
-.close-button:hover {
-  background: #f12e12;
-}
-
-
 
 </style>
