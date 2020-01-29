@@ -35,8 +35,8 @@ const quizRouter = function(collection){
   // // query params search ?day=day - The better way to do it
   // router.get('/', (req, res) => {
   //   let query = req.query
-    const key = Object.keys(query)
-    const value = Object.values(query)
+    // const key = Object.keys(query)
+    // const value = Object.values(query)
   //   //
   //   // if (value[0] === 'true' || 'false'){
   //   //   const newValue = JSON.parse(value)
