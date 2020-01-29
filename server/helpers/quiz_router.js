@@ -44,20 +44,6 @@ const quizRouter = function(collection){
         res.json({ status: 500, error: err })
     })
   })
-
-  //   collection
-  //     .map(obj => obj.day)
-  //     .then(doc => res.json(doc))
-
-
-
-  // router.get('/day', (req, res) => {
-  //   const day = req.params.day
-  //   // console.log(`today is ${day}`)
-  // })
-
-
-
   // router.delete('/:id', (req, res) => {
   //   const id = req.params.id
   //   collection
@@ -103,7 +89,6 @@ const quizRouter = function(collection){
   //         res.json({ statuts: 500, error:err });
   //     });
   //   })
-
     return router
 
 }
