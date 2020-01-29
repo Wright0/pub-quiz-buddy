@@ -9,7 +9,9 @@
       <dt>Time:</dt>
       <dd>{{ selectedQuiz.time }}</dd>
     </dl>
+
     <button @click="closeDetailWindow">close</button>
+    <google-places />
 
   </div>
 </template>
@@ -17,6 +19,7 @@
 <script>
 
 import { eventBus } from '../main.js'
+import GooglePlaces from './GooglePlaces.vue'
 
 export default {
   name: 'pub-quiz-details',
@@ -31,6 +34,9 @@ export default {
     closeDetailWindow(){
       eventBus.$emit('close-info-window');
     }
+  },
+  components: {
+    'google-places': GooglePlaces
   }
 }
 </script>
