@@ -4,7 +4,7 @@ db.dropDatabase();
 db.pubQuizzes.insertMany([
   {
     pub: "Safari Lounge",
-    address: "Easter Road",
+    address: "21 Cadzow Pl",
     day: "monday",
     time: "19:00",
     studentDiscount: true,
@@ -13,7 +13,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Amber Rose",
-    address: "Castle Street",
+    address: "22, 26 Castle St",
     day: "monday",
     time: "19:30",
     studentDiscount: true,
@@ -22,7 +22,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Argyle Bar",
-    address: "Argyle Place",
+    address: "17 Argyle Pl",
     day: "monday",
     time: "21:00",
     studentDiscount: true,
@@ -31,7 +31,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Barony Bar",
-    address: "Broughton Street",
+    address: "5 Broughton St",
     day: "monday",
     time: "21:30",
     studentDiscount: false,
@@ -40,7 +40,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Blackbird",
-    address: "home Street",
+    address: "39 Leven St",
     day: "monday",
     time: "20:00",
     studentDiscount: false,
@@ -48,17 +48,8 @@ db.pubQuizzes.insertMany([
     location: { lat: 55.941169, lng: -3.203705}
   },
   {
-    pub: "Bier Keller",
-    address: "Picardy Place",
-    day: "monday",
-    time: "20:00",
-    studentDiscount: false,
-    prize: 30,
-    location: { lat: 55.957078 , lng: -3.186713}
-  },
-  {
     pub: "Brass Monkey",
-    address: "Leith Walk",
+    address: "362 Leith Walk",
     day: "monday",
     time: "19:00",
     studentDiscount: true,
@@ -68,7 +59,7 @@ db.pubQuizzes.insertMany([
   // //tuesday quizzes
   {
     pub: "Akva",
-    address: "Fountainbridge",
+    address: "129 Fountainbridge",
     day: "tuesday",
     time: "20:00",
     studentDiscount: true,
@@ -78,7 +69,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Apothecary",
-    address: "Lister Square",
+    address: "No.8 Lister Square",
     day: "tuesday",
     time: "19:00",
     studentDiscount: true,
@@ -96,7 +87,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Auld Hundred",
-    address: "Rose Street",
+    address: "25 St. Leonard's St",
     day: "tuesday",
     time: "20:00",
     studentDiscount: false,
@@ -105,7 +96,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Bailise",
-    address: "St Stephen Street",
+    address: "4 St Stephen St",
     day: "tuesday",
     time: "20:30",
     studentDiscount: false,
@@ -115,7 +106,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Barrel House",
-    address: "Jocks Lodge",
+    address: "35 Smokey Brae",
     day: "tuesday",
     time: "20:30",
     studentDiscount: false,
@@ -123,7 +114,7 @@ db.pubQuizzes.insertMany([
     location: { lat: 55.955138, lng: -3.149665}
   },
   {
-    pub: "Black Cat",
+    pub: "168 Rose St",
     address: "Rose Street",
     day: "tuesday",
     time: "20:00",
@@ -134,7 +125,7 @@ db.pubQuizzes.insertMany([
   // //wednesday Quizzes
   {
     pub: "Antiquary",
-    address: "St Stephen Street",
+    address: "78 St Stephen St",
     day: "wednesday",
     time: "20:30",
     studentDiscount: true,
@@ -143,7 +134,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Brass Monkey",
-    address: "Drummond Street",
+    address: "14 Drummond St",
     day: "wednesday",
     time: "21:00",
     studentDiscount: true,
@@ -152,7 +143,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Cabaret Voltaire",
-    address: "Blair Street",
+    address: "38 Blair St, Edinburgh EH1 1QR",
     day: "wednesday",
     time: "21:00",
     studentDiscount: false,
@@ -161,7 +152,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Compass",
-    address: "Queen Charlotte Street",
+    address: "44 Queen Charlotte St",
     day: "wednesday",
     time: "20:00",
     studentDiscount: false,
@@ -170,7 +161,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Damm 27",
-    address: "Causewayside",
+    address: "27 Causewayside",
     day: "wednesday",
     time: "21:00",
     studentDiscount: false,
@@ -179,7 +170,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Eastside",
-    address: "George Street",
+    address: "51a George St",
     day: "wednesday",
     time: "19:00",
     studentDiscount: true,
@@ -189,7 +180,7 @@ db.pubQuizzes.insertMany([
   // //thursday Quizzes
   {
     pub: "Chanter",
-    address: "Bread St",
+    address: "32 Bread St",
     day: "thursday",
     time: "20:00",
     studentDiscount: true,
@@ -198,7 +189,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Footlights",
-    address: "Bread St",
+    address: "7 Spittal St, Edinburgh EH3 9DY",
     day: "thursday",
     time: "21:00",
     studentDiscount: true,
@@ -207,7 +198,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Hanging Bat",
-    address: "Lothian Road",
+    address: "133 Lothian Rd, Edinburgh EH3 9AB",
     day: "thursday",
     time: "18:00",
     studentDiscount: false,
@@ -216,7 +207,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "CC Blooms",
-    address: "Greenside Place",
+    address: "24 Greenside Pl",
     day: "thursday",
     time: "20:00",
     studentDiscount: true,
@@ -225,7 +216,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Black Bull",
-    address: "Grassmarket",
+    address: "12 Grassmarket",
     day: "thursday",
     time: "19:00",
     studentDiscount: true,
@@ -234,7 +225,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "The Abbey",
-    address: "South Clerk Street",
+    address: "65 S Clerk St",
     day: "thursday",
     time: "21:00",
     studentDiscount: false,
@@ -243,7 +234,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Newsroom",
-    address: "Leith Stret",
+    address: "11 Leith St",
     day: "thursday",
     time: "21:00",
     studentDiscount: false,
@@ -253,7 +244,7 @@ db.pubQuizzes.insertMany([
   // // friday Quizzes
   {
     pub: "Black Bull",
-    address: "Grassmarket",
+    address: "43 Leith St",
     day: "friday",
     time: "19:30",
     studentDiscount: false,
@@ -262,7 +253,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "The pond",
-    address: "Bath Road",
+    address: "4 Bath Rd",
     day: "friday",
     time: "20:00",
     studentDiscount: false,
@@ -271,7 +262,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "The Stable",
-    address: "Morthonhall Gate",
+    address: "50 Mortonhall Gate",
     day: "friday",
     time: "20:30",
     studentDiscount: true,
@@ -281,7 +272,7 @@ db.pubQuizzes.insertMany([
   // // sunday Quizzes
   {
     pub: "The Artisan Bar",
-    address: "London Road",
+    address: "36, London Rd, Edinburgh EH7 5BQ",
     day: "sunday",
     time: "21:00",
     studentDiscount: true,
@@ -290,7 +281,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Athletic Arms",
-    address: "Angle Park Terrace",
+    address: "3 Angle Park Terrace",
     day: "sunday",
     time: "19:30",
     studentDiscount: false,
@@ -299,7 +290,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "The Barologist",
-    address: "Commercial Street",
+    address: "23 Commercial St",
     day: "sunday",
     time: "21:00",
     studentDiscount: true,
@@ -308,7 +299,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Queens Arms",
-    address: "Frederick Street",
+    address: "49 Frederick St",
     day: "sunday",
     time: "20:00",
     studentDiscount: true,
@@ -317,7 +308,7 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Kings Wark",
-    address: "Shore",
+    address: "36 Shore",
     day: "sunday",
     time: "18:00",
     studentDiscount: true,
@@ -326,20 +317,12 @@ db.pubQuizzes.insertMany([
   },
   {
     pub: "Innis & Gunn",
-    address: "Lothian Road",
+    address: "83 Lothian Rd",
     day: "sunday",
     time: "19:00",
     studentDiscount: true,
     prize: 30,
     location: { lat: 55.946628, lng: -3.205517}
-  },
-  {
-    pub: "The Church of Jesus Christ of Latter-day Saints",
-    addrees: "spylaw road",
-    dau: "sunday",
-    time: "10:00",
-    studentDiscount: false,
-    prize: "jesus",
-    location: {lat: 55.930680, lng: -3.222504}
   }
+
 ]);

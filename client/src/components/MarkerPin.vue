@@ -18,17 +18,32 @@ import { eventBus } from '../main.js'
 
 export default {
   name: 'marker-pin',
+  data(){
+    return {
+      active: false
+    }
+  },
   methods: {
     bounceOnHover(){
-      this.$refs.marker.$markerObject.setAnimation("1")
+      this.$refs.marker.$markerObject.setAnimation("1");
     },
     mouseOffMarker(){
-      this.$refs.marker.$markerObject.setAnimation("0")
+      if (this.active) return;
+      this.$refs.marker.$markerObject.setAnimation("0");
     },
     handleMarkerClick(id){
+      this.active = true;
       eventBus.$emit('marker-clicked', id);
-      // this.$refs.marker.$markerObject.setAnimation("0")
+      this.$refs.marker.$markerObject.setAnimation("1");
+    },
+    stopBounce(id){
+      if (this.marker.id === id) return;
+      this.active = false;
+      this.$refs.marker.$markerObject.setAnimation("0");
     }
+  },
+  mounted(){
+    eventBus.$on('marker-clicked', this.stopBounce);
   },
   props: ['marker', 'index']
 }
