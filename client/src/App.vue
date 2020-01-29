@@ -4,7 +4,7 @@
       <add-pub-form v-if="showModal" class="add-pub-form" />
       <i v-if="showModal" @click="hideForm">&#215;</i>
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
-      <p>"I would totally use this"</p>
+      <p>A quiz for every day of the week- if your week only has 5 days</p>
       <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
     <day-filter/>
@@ -82,8 +82,9 @@ body {
 
 .cont {
   width: 100%;
+  padding: 2% 0;
   background: #111111;
-  /* z-index: 1; */ 
+  /* z-index: 1; */
   text-align:center;
   position: relative;
 }

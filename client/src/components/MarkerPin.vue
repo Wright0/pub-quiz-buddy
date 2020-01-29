@@ -39,12 +39,14 @@ export default {
     stopBounce(id){
       if (this.marker.id === id) return;
       this.active = false;
-      this.$refs.marker.$markerObject.setAnimation("0");
+      if (this.$refs.marker) {
+        this.$refs.marker.$markerObject.setAnimation("0")
+      }
     }
   },
   mounted(){
     eventBus.$on('marker-clicked', this.stopBounce);
-    eventBus.$on('selected-day', this.stopBounce);
+    eventBus.$on('selected-day', () => this.stopBounce);
     eventBus.$on('close-info-window', this.stopBounce);
   },
   props: ['marker', 'index']
