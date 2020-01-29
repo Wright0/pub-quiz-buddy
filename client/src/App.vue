@@ -8,11 +8,10 @@
       <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
 
-    <day-filter/>
-
     <add-pub-form v-if="showModal" class="add-pub-form" />
     <i v-if="showModal" @click="hideForm">&#215;</i>
 
+    <day-filter/> 
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
 
   </div>

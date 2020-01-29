@@ -109,9 +109,6 @@ export default {
 
 <style lang="css" scoped>
 
-  p {
-
-  }
   .add-pub-form, display-form {
     position: absolute;
     width: 100%;
@@ -121,9 +118,9 @@ export default {
   }
 
   .form {
+    margin-top: 8%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 3fr ;
-    margin-top: 5%;
     font-size: 1.3em;
   }
 
