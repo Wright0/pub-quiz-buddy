@@ -10,4 +10,9 @@ export default {
     return fetch(`${baseURL}/day/${day}`)
       .then(res => res.json())
   }
+
+  // getQuizzesByStudentDiscount(studentDiscount) {
+  //   return fetch(`${baseURL}/studentdiscount/${studentDiscount}`
+  //     .then(res => res.json())
+  // }
 }

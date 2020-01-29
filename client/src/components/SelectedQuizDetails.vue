@@ -14,7 +14,8 @@
       <h2>Time:</h2>
       <p>{{ selectedQuiz.time }}</p>
     </div>
-    <button class="close-button" @click="closeDetailWindow">CLOSE <i class="fas fa-times"></i></button>
+    <button class="close-button" @click="closeDetailWindow">CLOSE <i class="fas fa-times"></i>
+    </button>
     </div>
   </div>
 </template>

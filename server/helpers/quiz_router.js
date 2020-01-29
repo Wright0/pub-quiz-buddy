@@ -53,7 +53,6 @@ const quizRouter = function(collection){
   //       res.json({ status: 500, error: err })
   //   })
   // })
-<<<<<<< HEAD
   //
   //   router.post('/', (req, res) => {
   //     const newData = req.body
@@ -87,8 +86,6 @@ const quizRouter = function(collection){
     //       res.json({ statuts: 500, error:err });
     //   });
     // })
-=======
->>>>>>> develop
 
     return router
 
