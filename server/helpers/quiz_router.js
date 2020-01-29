@@ -18,7 +18,18 @@ const quizRouter = function(collection){
     })
   })
 
-//Get by day old way
+  router.get('/:id', (req, res) => {
+    const id = req.params.id
+    collection
+      .findOne({  _id: ObjectID(id)})
+      .then(doc => res.json(doc))
+      .catch(err => {
+        console.error(err)
+        res.status(500)
+        res.json({ status: 500, error: err })
+    })
+  })
+
   router.get('/day/:day', (req, res) => {
     const day = req.params.day.toLowerCase();
     collection
@@ -32,17 +43,19 @@ const quizRouter = function(collection){
     })
   })
 
-  // // query params search ?day=day - The better way to do it
-  // router.get('/', (req, res) => {
-  //   let query = req.query
-    // const key = Object.keys(query)
-    // const value = Object.values(query)
-  //   //
-  //   // if (value[0] === 'true' || 'false'){
-  //   //   const newValue = JSON.parse(value)
-  //   //   query = { [key[0]] : newValue }
-  //   // };
-  //
+    router.post('/', (req, res) => {
+      const newData = req.body;
+      collection
+      .insertOne(newData)
+      // .then(result => console.log())
+      .then(result => res.json(result.ops[0]))
+      .catch((err) => {
+        console.error(err)
+        res.status(500);
+        res.json({ status: 500, error: err })
+      })
+    })
+
   //   collection
   //     .find(query)
   //     .toArray()
@@ -53,6 +66,27 @@ const quizRouter = function(collection){
   //       res.json({ status: 500, error: err })
   //   })
   // })
+  //
+
+  //
+  //   router.put('/:id', (req, res) => {
+  //     const id = req.params.id;
+  //     const updatedData = req.body;
+  //     collection
+  //       .findOneAndUpdate(
+  //         { _id: ObjectID(id)},
+  //         { $set: updatedData},
+  //         { returnOriginal: false}
+  //       )
+  //       .then(result => {
+  //         res.json(result.value)
+  //       })
+  //       .catch(err => {
+  //         console.error(err);
+  //         res.status(500);
+  //         res.json({ statuts: 500, error:err });
+  //     });
+  //   })
 
     return router
 
