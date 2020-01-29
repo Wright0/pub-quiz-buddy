@@ -136,7 +136,7 @@ components: {
 .add-pub-form, display-form {
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   height: 700px;
   z-index: 1;
 }
@@ -145,6 +145,7 @@ components: {
   display: grid;
   grid-template-columns: 31% 20% 18% 31%;
   margin-top: 10px;
+  color: white;
 }
 .top-form-field {
   margin-top: 200px;
