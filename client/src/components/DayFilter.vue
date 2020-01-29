@@ -34,9 +34,9 @@ export default {
 <style scoped>
 .days-nav {
   width: 100%;
-  background: grey;
+  background:#e1e1e1;
   /* z-index: 1; */
-  color: black;
+  color: #1e1e1e;
 }
 
 ul {
