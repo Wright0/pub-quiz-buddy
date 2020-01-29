@@ -4,20 +4,13 @@
       <pub-quiz-details :quizId="selectedPubId" :quizzes="quizzes" />
       <GmapMap
       :center="mapCenter"
-      :zoom="14"
+      :zoom="13.5"
       map-type-id="roadmap"
       >
 
-      <GmapMarker
-      :key="index"
-      v-for="(marker, index) in markers"
-      :position="marker.position"
-      :clickable="true"
-      :draggable="false"
-
-
-      @click="handleMarkerClick(marker.id)"
-      />
+      <marker-pin v-for="(marker, index) in markers"
+      :marker="marker"
+      :index="index"/>
     </GmapMap>
   </div>
 
@@ -29,6 +22,7 @@
 <script>
 
 import SelectedQuizDetails from './SelectedQuizDetails.vue'
+import MarkerPin from './MarkerPin.vue'
 import { eventBus } from '../main.js'
 
 export default {
@@ -65,11 +59,6 @@ export default {
     }
   },
   props : ["quizzes", "selectedDay", "selectedDayQuizzes"],
-  methods: {
-    handleMarkerClick(id){
-      this.selectedPubId = id
-    }
-  },
   mounted(){
     eventBus.$on('close-info-window', () => {
       this.selectedPubId = null;
@@ -78,9 +67,14 @@ export default {
     eventBus.$on('selected-day', () => {
       this.selectedPubId = null;
     })
+
+    eventBus.$on('marker-clicked', id => {
+      this.selectedPubId = id
+    })
   },
   components: {
-    'pub-quiz-details': SelectedQuizDetails
+    'pub-quiz-details': SelectedQuizDetails,
+    'marker-pin': MarkerPin
   }
 };
 </script>
