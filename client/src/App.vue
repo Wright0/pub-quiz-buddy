@@ -9,6 +9,7 @@
       <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
     <day-filter/>
+    <!-- <additional-filters> -->
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
   </div>
 </template>
@@ -82,7 +83,7 @@ body {
 
 .cont {
   width: 100%;
-  background: black;
+  background: #111111;
   /* z-index: 1; */
   color: white;
   text-align:center;
@@ -100,6 +101,8 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
+  color: #e2e2e2
+
 }
 
 button.add-quiz {
@@ -128,7 +131,7 @@ i {
 
 .logo-link{
   text-decoration: none;
-  color: white;
+  color: #e2e2e2
 }
 
 

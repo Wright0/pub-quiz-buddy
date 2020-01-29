@@ -5,9 +5,10 @@ const quizRouter = function(collection){
 
   const router = express.Router()
 
+//Get all
   router.get('/', (req, res) => {
     collection
-      .find()
+      .find({})
       .toArray()
       .then((docs) => res.json(docs))
       .catch((err)  => {
@@ -56,24 +57,9 @@ const quizRouter = function(collection){
     })
 
   //   collection
-  //     .map(obj => obj.day)
+  //     .find(query)
+  //     .toArray()
   //     .then(doc => res.json(doc))
-
-
-
-  // router.get('/day', (req, res) => {
-  //   const day = req.params.day
-  //   // console.log(`today is ${day}`)
-  // })
-
-
-
-  // router.delete('/:id', (req, res) => {
-  //   const id = req.params.id
-  //   collection
-  //     .deleteOne( { _id: ObjectID(id) } )
-  //     .then(() => collection.find().toArray())
-  //     .the(doc => res.json(doc))
   //     .catch(err => {
   //       console.error(err)
   //       res.status(500)

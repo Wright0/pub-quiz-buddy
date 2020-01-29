@@ -1,16 +1,21 @@
 <template lang="html">
   <div v-if="quizId" class="details-box">
+    <div id="pub-info-container">
     <h1>{{ selectedQuiz.pub }}</h1>
-    <dl>
-      <dt>Address:</dt>
-      <dd>{{ selectedQuiz.address }}</dd>
-      <dt>Prize:</dt>
-      <dd>{{ selectedQuiz.prize }}</dd>
-      <dt>Time:</dt>
-      <dd>{{ selectedQuiz.time }}</dd>
-    </dl>
+    <div class="details-inner-container">
+      <h2>Address:</h2>
+      <p>{{ selectedQuiz.address }}</p>
+    </div>
+    <div class="details-inner-container">
+      <h2>Prize:</h2>
+      <p>£{{ selectedQuiz.prize }}</p>
+    </div>
+    <div class="details-inner-container">
+      <h2>Time:</h2>
+      <p>{{ selectedQuiz.time }}</p>
+    </div>
     <button class="close-button" @click="closeDetailWindow">CLOSE <i class="fas fa-times"></i></button>
-
+    </div>
   </div>
 </template>
 
@@ -38,11 +43,11 @@ export default {
 <style lang="css" scoped>
 
 .details-box {
-  margin: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 400px;
+  width: 300px;
+  background: #f3f3f3;
 }
 
 .close-button {
@@ -50,8 +55,8 @@ export default {
   height: 30px;
   background: #dd270d;
   color: white;
-cursor: pointer;
-margin: 0 auto;
+  cursor: pointer;
+  margin: 40px auto;
 }
 
 .close-button:focus{
@@ -63,5 +68,36 @@ margin: 0 auto;
 }
 
 
+#pub-info-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+h1, h2 {
+  text-align: center;
+  color: #2b2b2b;
+
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.details-inner-container {
+  display: flex;
+  flex-direction: column;
+  height:80px;
+}
+
+
+p {
+  font-size: 18px;
+  color: #2b2b2b;
+  margin: auto;
+  padding: 0;
+  text-align:  center;
+  font-weight: bold;
+  letter-spacing: 0;
+}
 </style>
