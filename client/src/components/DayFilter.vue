@@ -23,6 +23,8 @@ export default {
     eventBus.$on('selected-day', selectedDay => {
       this.selectedDay = selectedDay
     })
+
+    eventBus.$on('pub-quiz-added', newQuiz => this.selectedDay = newQuiz.day)
   },
   components: {
     'day-filter-list-item': DayFilterListItem

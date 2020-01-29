@@ -94,7 +94,6 @@ export default {
       this.location.lat = lat
       this.location.lng = lng
       this.pub = pub
-      console.log(place);
     });
 
     const getAddressData = function (addressData, placeResultData, id) {
@@ -168,6 +167,7 @@ export default {
     width: 50%;
     text-align: left;
   }
+
   .discount-radio-wrap input[type="radio"] {
       margin: 0 10px;
   }

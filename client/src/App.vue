@@ -11,7 +11,7 @@
     <add-pub-form v-if="showModal" class="add-pub-form" />
     <i v-if="showModal" @click="hideForm">&#215;</i>
 
-    <day-filter/> 
+    <day-filter/>
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
 
   </div>
@@ -54,12 +54,19 @@ export default {
 
       PubQuizzesService.getQuizzesByDay(this.selectedDay)
       .then(fetchedQuizzes => this.selectedDayQuizzes = fetchedQuizzes)
-
-      eventBus.$on('pub-quiz-added', quiz =>
-      this.quizzes.push(quiz))
     })
 
-    eventBus.$on('pub-quiz-added', () => this.showModal = false)
+    eventBus.$on('pub-quiz-added', newQuiz => {
+      this.showModal = false;
+      this.quizzes.push(newQuiz);
+      this.selectedDay = newQuiz.day
+
+      this.fetchQuizzes();
+
+      PubQuizzesService.getQuizzesByDay(newQuiz.day)
+      .then(fetchedQuizzes => this.selectedDayQuizzes = fetchedQuizzes)
+    })
+
   },
   components: {
     'day-filter': DayFilter,
