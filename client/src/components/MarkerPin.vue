@@ -44,6 +44,8 @@ export default {
   },
   mounted(){
     eventBus.$on('marker-clicked', this.stopBounce);
+    eventBus.$on('selected-day', this.stopBounce);
+    eventBus.$on('close-info-window', this.stopBounce);
   },
   props: ['marker', 'index']
 }
