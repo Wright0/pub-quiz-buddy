@@ -83,8 +83,7 @@ body {
 .cont {
   width: 100%;
   background: #111111;
-  /* z-index: 1; */
-  color: white;
+  /* z-index: 1; */ 
   text-align:center;
   position: relative;
 }

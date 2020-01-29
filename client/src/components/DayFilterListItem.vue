@@ -1,9 +1,9 @@
 <template lang="html">
   <li class='nav-item' :style='{
     "text-decoration" : (isSelectedProp ? "underline" : "none" ),
-    "color" : (isSelectedProp ? "#202020" : "#1c1c1c" )}'
+    "color" : (isSelectedProp ? "#f12e12" : "#e2e2e2" )}'
   :value="day" @click="handleClick()">{{day}}</li>
-  <!-- Something like this for class: :class="day === monday ? standard : active" -->
+
 </template>
 
 <script>
@@ -29,10 +29,6 @@ li {
   letter-spacing: 2px;
   font-size: 1.3em;
   cursor: pointer;
-}
-
-.nav-item:hover {
-  /* color: #2b2b2b; */
 }
 
 </style>
