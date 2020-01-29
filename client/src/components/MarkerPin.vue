@@ -1,14 +1,15 @@
 <template lang="html">
-  <GmapMarker
-  :key="index"
-  :clickable="true"
-  :draggable="false"
-  :animation="0"
-  :position="marker.position"
-  @click="handleMarkerClick(marker.id)"
-  @mouseover="bounceOnHover"
-  @mouseout="mouseOffMarker"
-  />
+    <GmapMarker
+      ref="marker"
+      :key="index"
+      :clickable="true"
+      :draggable="false"
+      :animation="0"
+      :position="marker.position"
+      @click="handleMarkerClick(marker.id)"
+      @mouseover="bounceOnHover"
+      @mouseout="mouseOffMarker"
+    />
 </template>
 
 <script>
@@ -19,15 +20,14 @@ export default {
   name: 'marker-pin',
   methods: {
     bounceOnHover(){
-      console.log(this.marker);
-      // this.marker.animation.setAnimation(google.maps.Animation.BOUNCE)
+      this.$refs.marker.$markerObject.setAnimation("1")
     },
-    mouseOffMarker(e){
-      console.log(e);
+    mouseOffMarker(){
+      this.$refs.marker.$markerObject.setAnimation("0")
     },
     handleMarkerClick(id){
-      eventBus.$emit('marker-clicked', id)
-
+      eventBus.$emit('marker-clicked', id);
+      // this.$refs.marker.$markerObject.setAnimation("0")
     }
   },
   props: ['marker', 'index']
