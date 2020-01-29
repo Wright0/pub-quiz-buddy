@@ -1,18 +1,12 @@
 <template>
   <div id="app">
     <nav class="cont">
-      <form v-if="showModal" class="add-pub-form" action="index.html" method="post">
-        <i @click="hideForm">&#215;</i>
-        <div class="top-form-field form-field">
-          <div class=""></div>
-        <label for="">Name of Pub</label>
-        <input type="text" name="" value="">
-        <div class=""></div>
-        </div>
-      </form>
+      <add-pub-form v-if="showModal" class="add-pub-form" />
+      <!-- SHould I pass the v-if down as a prop or the I thing here? -->
+      <i v-if="showModal" @click="hideForm">&#215;</i>
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
       <p>"I would totally use this"</p>
-      <button class="add-quiz" @click="displayForm" >Add Pub Quiz</button>
+      <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
     <day-filter/>
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
@@ -24,6 +18,7 @@ import { eventBus } from './main.js'
 import PubQuizzesService from './services/PubQuizzesService.js'
 import DayFilter from './components/DayFilter.vue'
 import PubQuizMap from './components/PubQuizMap.vue'
+import AddPubForm from './components/AddPubForm'
 
 export default {
   name: 'app',
@@ -32,12 +27,13 @@ export default {
       quizzes: [], //result of a fetch
       selectedDay: "", //passed up from DayFilterListItem
       selectedDayQuizzes: null,
-      showModal: false
+      showModal: false // If this is true then the component displays??
     }
   },
   components: {
     'day-filter': DayFilter,
-    'pub-quiz-map': PubQuizMap
+    'pub-quiz-map': PubQuizMap,
+    'add-pub-form': AddPubForm
   },
   methods: {
     fetchQuizzes(){
@@ -47,10 +43,9 @@ export default {
     displayForm(event){
        this.showModal = true;
     },
-    hideForm() {
+    hideForm(event) {
       this.showModal = false;
     }
-
   },
   mounted(){
     this.fetchQuizzes()
@@ -67,16 +62,6 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap');
-
-i {
-  color: red;
-  top: 10px;
-  right: 10px;
-  font-size: 80px;
-  position: fixed;
-  cursor: pointer;
-  line-height: 16px;
-}
 
 nav > h1 {
   margin-top: 0;
@@ -99,18 +84,6 @@ body {
   position: relative;
 }
 
-.add-pub-form, display-form {
-    position: absolute;
-    width: 100%;
-    background-color: black;
-    height: 700px;
-    opacity: 0.7;
-    z-index: 1;
-}
-
-user agent stylesheet
-form
-
 h1 {
   margin: 0;
   font-size: 2em;
@@ -124,7 +97,7 @@ p {
   font-size: 1em;
 }
 
-.add-quiz {
+button.add-quiz {
     float: right;
     position: relative;
     top: -52px;
@@ -137,12 +110,15 @@ p {
     font-size: 14px;
 }
 
-.form-field {
-  display: grid;
-  grid-template-columns: 31% 20% 18% 31%;
-}
-.top-form-field {
-    margin-top: 200px;
+i {
+  color: red;
+  top: 10px;
+  right: 10px;
+  font-size: 80px;
+  position: fixed;
+  cursor: pointer;
+  line-height: 16px;
+  z-index: 5;
 }
 
 .logo-link{
@@ -150,7 +126,5 @@ p {
   color: white;
 }
 
-.hide-form {
-  display: none;
-}
+
 </style>
