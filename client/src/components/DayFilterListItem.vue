@@ -20,7 +20,7 @@
   }
   </script>
 
-  <style lang="css" scoped>
+<style lang="css" scoped>
 
   li {
     margin: 0px 20px;
@@ -31,4 +31,8 @@
     cursor: pointer;
   }
 
-  </style>
+  li:hover {
+    font-style: italic;
+  }
+
+</style>

@@ -42,60 +42,60 @@ export default {
 
 <style lang="css" scoped>
 
-h1, h2 {
-  text-align: center;
-  color: #2b2b2b;
-}
+  h1, h2 {
+    text-align: center;
+    color: #2b2b2b;
+  }
 
-h2 {
-  margin-bottom: 0;
-}
+  h2 {
+    margin-bottom: 0;
+  }
 
-p {
-  font-size: 18px;
-  color: #2b2b2b;
-  margin: auto;
-  padding: 0;
-  text-align:  center;
-  font-weight: bold;
-  letter-spacing: 0;
-}
+  p {
+    font-size: 18px;
+    color: #2b2b2b;
+    margin: auto;
+    padding: 0;
+    text-align:  center;
+    font-weight: bold;
+    letter-spacing: 0;
+  }
 
-.details-box {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  background: #f3f3f3;
-}
+  .details-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background: #f3f3f3;
+  }
 
-.close-button {
-  width: 100px;
-  height: 30px;
-  background: #dd270d;
-  color: white;
-  cursor: pointer;
-  margin: 40px auto;
-}
+  .close-button {
+    width: 100px;
+    height: 30px;
+    background: #dd270d;
+    color: white;
+    cursor: pointer;
+    margin: 40px auto;
+  }
 
-.close-button:focus{
-  outline: none;
-}
+  .close-button:focus{
+    outline: none;
+  }
 
-.close-button:hover {
-  background: #f12e12;
-}
+  .close-button:hover {
+    background: #f12e12;
+  }
 
-#pub-info-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+  #pub-info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.details-inner-container {
-  display: flex;
-  flex-direction: column;
-  height:80px;
-}
+  .details-inner-container {
+    display: flex;
+    flex-direction: column;
+    height:80px;
+  }
 
 </style>

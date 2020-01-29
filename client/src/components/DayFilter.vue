@@ -32,21 +32,21 @@ export default {
 
 
 <style scoped>
-.days-nav {
-  width: 100%;
-  background:#2b2b2b;
-  padding: 0.75% 0;
-  /* z-index: 1; */
-  /* color: #e2e2e2; */
-}
+  .days-nav {
+    width: 100%;
+    background:#2b2b2b;
+    padding: 0.75% 0;
+    /* z-index: 1; */
+    /* color: #e2e2e2; */
+  }
 
-ul {
-  margin: 0px auto;
-  padding: 0px;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+  ul {
+    margin: 0px auto;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
 </style>

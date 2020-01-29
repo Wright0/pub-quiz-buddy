@@ -75,14 +75,14 @@ export default {
 
 <style lang="css" scoped>
 
-div {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
+  div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
 
-.vue-map-container{
-  width:100%;
-  height: 100vh;
-}
+  .vue-map-container{
+    width:100%;
+    height: 100vh;
+  }
 </style>

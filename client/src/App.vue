@@ -3,12 +3,15 @@
     <nav class="cont">
       <add-pub-form v-if="showModal" class="add-pub-form" />
       <i v-if="showModal" @click="hideForm">&#215;</i>
+
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
       <p>A quiz for every day of the week- if your week only has 5 days</p>
+
       <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
+
     <day-filter/>
-    <!-- <additional-filters> -->
+
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
   </div>
 </template>
@@ -24,10 +27,10 @@ export default {
   name: 'app',
   data(){
     return {
-      quizzes: [], //result of a fetch
-      selectedDay: "", //passed up from DayFilterListItem
+      quizzes: [],
+      selectedDay: "",
       selectedDayQuizzes: null,
-      showModal: false // If this is true then the component displays??
+      showModal: false
     }
   },
   methods: {
@@ -66,72 +69,72 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento&display=swap');
 
-nav > h1 {
-  margin-top: 0;
-}
+  nav > h1 {
+    margin-top: 0;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Quattrocento', serif;
-  font-family: 'Oswald', sans-serif;
-  background-color: white;
-}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quattrocento', serif;
+    font-family: 'Oswald', sans-serif;
+    background-color: white;
+  }
 
-.cont {
-  width: 100%;
-  padding: 2% 0;
-  background: #111111;
-  /* z-index: 1; */
-  text-align:center;
-  position: relative;
-}
+  .cont {
+    width: 100%;
+    padding: 2% 0;
+    background: #111111;
+    /* z-index: 1; */
+    text-align:center;
+    position: relative;
+  }
 
-h1 {
-  margin: 0;
-  font-size: 2em;
-}
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
 
-p {
-  margin: 0;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 1em;
-  color: #e2e2e2
+  p {
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1em;
+    color: #e2e2e2
 
-}
+  }
 
-button.add-quiz {
-  float: right;
-  position: relative;
-  top: -62px;
-  background-color: black;
-  left: -67px;
-  padding: 8px 19px;
-  border-radius: 10px;
-  color: white;
-  font-weight: 400;
-  font-size: 1.2em;
-  font-family: inherit;
-}
+  button.add-quiz {
+    float: right;
+    position: relative;
+    top: -62px;
+    background-color: black;
+    left: -67px;
+    padding: 8px 19px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2em;
+    font-family: inherit;
+  }
 
-i {
-  color: red;
-  top: 10px;
-  right: 10px;
-  font-size: 80px;
-  position: fixed;
-  cursor: pointer;
-  line-height: 16px;
-  z-index: 5;
-}
+  i {
+    color: red;
+    top: 10px;
+    right: 10px;
+    font-size: 80px;
+    position: fixed;
+    cursor: pointer;
+    line-height: 16px;
+    z-index: 5;
+  }
 
-.logo-link{
-  text-decoration: none;
-  color: #e2e2e2
-}
+  .logo-link{
+    text-decoration: none;
+    color: #e2e2e2
+  }
 
 </style>

@@ -21,23 +21,30 @@
     <div class="form-field">
       <div class=""></div>
       <label for="quiz">Day of Quiz</label>
-      <input type="text" v-model="day" name="quiz">
+      <select v-model="day">
+        <option name="day" value="monday">Monday</option>
+        <option name="day" value="tuesday">Tuesday</option>
+        <option name="day" value="wednesday">Wednesday</option>
+        <option name="day" value="thursday">Thursday</option>
+        <option name="day" value="friday">Friday</option>
+      </select>
       <div class=""></div>
     </div>
 
     <div class="form-field">
       <div class=""></div>
       <label for="time">Time of Quiz</label>
-      <input type="text" v-model="time" name="time">
+      <input type="time" v-model="time" name="time"
+       min="18:00" max="23:00" />
       <div class=""></div>
     </div>
 
     <div class="form-field">
       <div class=""></div>
       <label for="">Student Discount</label>
-      <div class="radio-buttons">
-        <input type="radio" v-model="studentDiscount" value="true">Yes<br>
-        <input type="radio" v-model="studentDiscount" value="false">No<br>
+      <div class="discount-radio-wrap">
+        <div><input type="radio" v-model="studentDiscount" value="true">Yes</input></div>
+        <div><input type="radio" v-model="studentDiscount" value="false">No</input></div>
       </div>
       <div class=""></div>
     </div>
@@ -82,6 +89,7 @@ export default {
   methods: {
     addPubQuiz(evt) {
       evt.preventDefault();
+
       const payload  = {
         pub: this.pub,
         address: this.address,
@@ -91,15 +99,17 @@ export default {
         prize: this.prize,
         location: { lat: this.location.lat, lng: this.location.lng }
       }
+
       PubQuizzesService.postPubQuiz(payload)
-      .then( res => { eventBus.$emit('pub-quiz-added', res);
-    })
+      .then( res => eventBus.$emit('pub-quiz-added', res))
+    }
   },
   mounted() {
     this.autocomplete = new google.maps.places.Autocomplete(
       (this.$refs.autocomplete),
       {types: ['geocode']}
     );
+
     this.autocomplete.addListener('place_changed', () => {
       let place = this.autocomplete.getPlace();
       let ac = place.address_components[0];
@@ -110,41 +120,53 @@ export default {
       this.location.lat = lat
       this.location.lng = lng
     });
+
+    const getAddressData = function (addressData, placeResultData, id) {
+      this.address = placeResultData.address_components.formatted_address;
+    }
   },
-  getAddressData: function (addressData, placeResultData, id) {
-    console.log(placeResultData);
-    this.address = placeResultData.address_components.formatted_address;
-  }
-}
-// Is this component needed?
-// components: {
-//   Places,
-// },
+  components: {
+    Places
+  },
 }
 </script>
 
 <style lang="css" scoped>
 
+  .add-pub-form, display-form {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    z-index: 1;
+  }
 
-.add-pub-form, display-form {
-  position: absolute;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 100vh;
-  z-index: 1;
-}
+  .form-field {
+    display: grid;
+    grid-template-columns: 31% 20% 18% 31%;
+    margin-top: 10px;
+  }
+  .top-form-field {
+    margin-top: 200px;
+  }
 
-.form-field {
-  display: grid;
-  grid-template-columns: 31% 20% 18% 31%;
-  margin-top: 10px;
-}
-.top-form-field {
-  margin-top: 200px;
-}
+  label {
+    color: white;
+  }
 
-label, .radio-buttons {
-  color: white;
-}
+  input[type="time"] {
+    width: 28%;
+  }
+
+  .discount-radio-wrap {
+    display: flex;
+  }
+  .discount-radio-wrap div {
+    width: 50%;
+    text-align: left;
+  }
+  .discount-radio-wrap input[type="radio"] {
+      margin: 0 10px;
+  }
 
 </style>
