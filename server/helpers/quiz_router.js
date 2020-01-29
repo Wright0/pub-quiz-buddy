@@ -29,9 +29,6 @@ const quizRouter = function(collection){
     })
   })
 
-
-  // query params search ?day=day - The better way to do it
-
   router.get('/day/:day', (req, res) => {
     const day = req.params.day.toLowerCase();
     collection
@@ -44,6 +41,19 @@ const quizRouter = function(collection){
         res.json({ status: 500, error: err })
     })
   })
+
+    router.post('/', (req, res) => {
+      const newData = req.body;
+      collection
+      .insertOne(newData)
+      // .then(result => console.log())
+      .then(result => res.json(result.ops[0]))
+      .catch((err) => {
+        console.error(err)
+        res.status(500);
+        res.json({ status: 500, error: err })
+      })
+    })
 
   //   collection
   //     .map(obj => obj.day)
@@ -71,19 +81,7 @@ const quizRouter = function(collection){
   //   })
   // })
   //
-  //   router.post('/', (req, res) => {
-  //     const newData = req.body
-  //     collection
-  //       .insertOne(newData)
-  //       .then(result => {
-  //         res.json(result.ops[0])
-  //       })
-  //       .catch(err => {
-  //           console.error(err)
-  //           res.status(500)
-  //           res.json({ status: 500, error: err })
-  //       })
-  //     })
+
   //
   //   router.put('/:id', (req, res) => {
   //     const id = req.params.id;
