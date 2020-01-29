@@ -1,8 +1,6 @@
 <template>
   <div id="app">
     <nav class="cont">
-      <add-pub-form v-if="showModal" class="add-pub-form" />
-      <i v-if="showModal" @click="hideForm">&#215;</i>
 
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
       <p>A quiz for every day of the week- if your week only has 5 days</p>
@@ -12,7 +10,11 @@
 
     <day-filter/>
 
+    <add-pub-form v-if="showModal" class="add-pub-form" />
+    <i v-if="showModal" @click="hideForm">&#215;</i>
+
     <pub-quiz-map :selectedDay="selectedDay" :quizzes="quizzes" :selectedDayQuizzes="selectedDayQuizzes"/>
+
   </div>
 </template>
 
@@ -123,9 +125,8 @@ export default {
 
   i {
     color: red;
-    top: 10px;
-    right: 10px;
-    font-size: 80px;
+    right: 20px;
+    font-size: 100px;
     position: fixed;
     cursor: pointer;
     line-height: 16px;
