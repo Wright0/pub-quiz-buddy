@@ -2,17 +2,23 @@
   <div v-if="quizId" class="details-box">
     <div id="pub-info-container">
       <h1>{{ selectedQuiz.pub }}</h1>
+      <p>{{selectedQuiz.day}}</p>
       <div class="details-inner-container">
         <h2>Address:</h2>
         <p>{{ selectedQuiz.address }}</p>
+      </div>
+      <div class="details-inner-container">
+        <h2>Time:</h2>
+        <p>{{ selectedQuiz.time }}</p>
       </div>
       <div class="details-inner-container">
         <h2>Prize:</h2>
         <p>£{{ selectedQuiz.prize }}</p>
       </div>
       <div class="details-inner-container">
-        <h2>Time:</h2>
-        <p>{{ selectedQuiz.time }}</p>
+        <h2>Student discount:</h2>
+        <p v-if="selectedQuiz.studentDiscount === true">Yes</p>
+        <p v-else="selectedQuiz.studentDiscount === false">No</p>
       </div>
       <button class="close-button" @click="closeDetailWindow">CLOSE</button>
     </div>

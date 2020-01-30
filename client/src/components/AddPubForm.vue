@@ -112,7 +112,7 @@ export default {
     position: absolute;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    height: 100vh;
+    height: 108vh;
     z-index: 1;
   }
 
