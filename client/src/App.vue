@@ -127,6 +127,7 @@ export default {
     font-weight: 400;
     font-size: 1.2em;
     font-family: inherit;
+    cursor: pointer;
   }
 
   i {
@@ -134,7 +135,7 @@ export default {
     right: 20px;
     font-size: 100px;
     position: fixed;
-    margin-right: 250px;
+    margin-right: 400px;
     cursor: pointer;
     line-height: 16px;
     z-index: 5;

@@ -145,7 +145,8 @@ export default {
   }
 
   input[type="time"] {
-    width: 30%;
+    display: flex;
+    flex-direction: row;
     font-size: 1em;
   }
 
