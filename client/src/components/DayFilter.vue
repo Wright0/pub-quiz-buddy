@@ -38,8 +38,6 @@ export default {
     width: 100%;
     background:#2b2b2b;
     padding: 0.75% 0;
-    /* z-index: 1; */
-    /* color: #e2e2e2; */
   }
 
   ul {

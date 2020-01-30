@@ -134,6 +134,7 @@ export default {
     right: 20px;
     font-size: 100px;
     position: fixed;
+    margin-right: 250px;
     cursor: pointer;
     line-height: 16px;
     z-index: 5;
