@@ -7,8 +7,6 @@ db.pubQuizzes.insertMany([
     address: "21 Cadzow Pl",
     day: "monday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 100,
     location: { lat: 55.957235, lng: -3.167683}
   },
   {
@@ -16,8 +14,6 @@ db.pubQuizzes.insertMany([
     address: "22, 26 Castle St",
     day: "monday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.951940, lng: -3.202796}
   },
   {
@@ -25,8 +21,6 @@ db.pubQuizzes.insertMany([
     address: "17 Argyle Pl",
     day: "monday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.938412, lng: -3.191309}
   },
   {
@@ -34,8 +28,6 @@ db.pubQuizzes.insertMany([
     address: "5 Broughton St",
     day: "monday",
     time: "21:30",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.958186, lng: -3.188618}
   },
   {
@@ -43,8 +35,6 @@ db.pubQuizzes.insertMany([
     address: "39 Leven St",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 50,
     location: { lat: 55.941169, lng: -3.203705}
   },
   {
@@ -52,8 +42,6 @@ db.pubQuizzes.insertMany([
     address: "362 Leith Walk",
     day: "monday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.964030, lng: -3.177738}
   },
   {
@@ -61,8 +49,6 @@ db.pubQuizzes.insertMany([
    address: "Picardy Place",
    day: "monday",
    time: "20:00",
-   studentDiscount: false,
-   prize: 30,
    location: { lat: 55.957078 , lng: -3.186713}
   },
   {
@@ -70,8 +56,6 @@ db.pubQuizzes.insertMany([
     address: "8 Leven Street",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 50,
     location: { lat: 55.941732, lng: -3.203265}
   },
   {
@@ -79,8 +63,6 @@ db.pubQuizzes.insertMany([
     address: "58 Angle Park Terrace",
     day: "monday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.937689, lng: -3.225854}
   },
   {
@@ -88,8 +70,6 @@ db.pubQuizzes.insertMany([
     address: "20 Young Street",
     day: "monday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.952787, lng: -3.206009}
   },
   {
@@ -97,8 +77,6 @@ db.pubQuizzes.insertMany([
     address: "17 Corstorphine High Street",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.940558, lng: -3.283281}
   },
   {
@@ -106,8 +84,6 @@ db.pubQuizzes.insertMany([
     address: "69 Home Street",
     day: "monday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.942175, lng: -3.203207}
   },
   {
@@ -115,8 +91,6 @@ db.pubQuizzes.insertMany([
     address: "3 Cumberland Street",
     day: "monday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 10,
     location: { lat: 55.959007, lng: -3.197121}
   },
   {
@@ -124,8 +98,6 @@ db.pubQuizzes.insertMany([
     address: "22 Clerk Street",
     day: "monday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.942704, lng: -3.182492}
   },
   {
@@ -133,8 +105,6 @@ db.pubQuizzes.insertMany([
     address: "30 Niddry Street",
     day: "monday",
     time: "22:00",
-    studentDiscount: false,
-    prize: 50,
     location: { lat: 55.949717, lng: -3.187016}
   },
   {
@@ -142,8 +112,6 @@ db.pubQuizzes.insertMany([
     address: "44 West Crosscauseway",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.943921, lng: -3.183913}
   },
 
@@ -153,8 +121,6 @@ db.pubQuizzes.insertMany([
     address: "129 Fountainbridge",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.943236, lng: -3.208383}
   },
   {
@@ -162,8 +128,6 @@ db.pubQuizzes.insertMany([
     address: "112 Hanover Street",
     day: "monday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.954572, lng: -3.198084}
   },
   {
@@ -171,8 +135,6 @@ db.pubQuizzes.insertMany([
     address: "85 St. Leonard’s Street",
     day: "monday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.942187, lng: -3.179137}
   },
   {
@@ -180,8 +142,6 @@ db.pubQuizzes.insertMany([
     address: "13 Market Street",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.950954, lng: -3.190336}
   },
   {
@@ -189,8 +149,6 @@ db.pubQuizzes.insertMany([
     address: "542 Lanark Road",
     day: "monday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.903361, lng: -3.285486}
   },
   {
@@ -198,8 +156,6 @@ db.pubQuizzes.insertMany([
     address: "47 Ratcliffe Terrace",
     day: "monday",
     time: "19:45",
-    studentDiscount: true,
-    prize: 15,
     location: { lat: 55.933933, lng: -3.178103}
   },
   {
@@ -207,8 +163,6 @@ db.pubQuizzes.insertMany([
     address: "242 Morrison Street",
     day: "monday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.946279, lng: -3.214384}
   },
   {
@@ -216,8 +170,6 @@ db.pubQuizzes.insertMany([
     address: "‎235 Causewayside",
     day: "monday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.934950, lng: -3.179061}
   },
   {
@@ -225,8 +177,6 @@ db.pubQuizzes.insertMany([
     address: "‎32 Trinity Crescent",
     day: "monday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.980038, lng: -3.204308}
   },
   {
@@ -234,8 +184,6 @@ db.pubQuizzes.insertMany([
     address: "12a Broughton Street Lane",
     day: "monday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 35,
     location: { lat: 55.957323, lng: -3.187006}
   },
   {
@@ -243,8 +191,6 @@ db.pubQuizzes.insertMany([
     address: "2 Lochside Place",
     day: "monday",
     time: "18:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.933033, lng: -3.315204}
   },
   {
@@ -252,8 +198,6 @@ db.pubQuizzes.insertMany([
     address: "1 Summerhall Place",
     day: "monday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.939967, lng: -3.181507}
   },
   {
@@ -261,8 +205,6 @@ db.pubQuizzes.insertMany([
     address: "No.8 Lister Square",
     day: "tuesday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.943603, lng: -3.193866}
   },
   {
@@ -270,8 +212,6 @@ db.pubQuizzes.insertMany([
     address: "9 Hunter Square",
     day: "monday",
     time: "22:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.949635, lng: -3.187614}
   },
   {
@@ -279,8 +219,6 @@ db.pubQuizzes.insertMany([
     address: "St Leonard Street",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.943540, lng: -3.180200}
   },
   {
@@ -288,8 +226,6 @@ db.pubQuizzes.insertMany([
     address: "25 St. Leonard's St",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.952344, lng: -3.199284}
   },
   {
@@ -297,8 +233,6 @@ db.pubQuizzes.insertMany([
     address: "4 St Stephen St",
     day: "tuesday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.957531, lng: -3.207069}
 
   },
@@ -307,8 +241,6 @@ db.pubQuizzes.insertMany([
     address: "35 Smokey Brae",
     day: "tuesday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.955138, lng: -3.149665}
   },
   {
@@ -316,8 +248,6 @@ db.pubQuizzes.insertMany([
     address: "Rose Street",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.951616, lng: -3.203661}
   },
   {
@@ -325,8 +255,6 @@ db.pubQuizzes.insertMany([
    address: "18 Corstorphine Road",
    day: "tuesday",
    time: "20:00",
-   studentDiscount: true,
-   prize: 20,
    location: { lat: 55.945618, lng: -3.243619}
  },
  {
@@ -334,8 +262,6 @@ db.pubQuizzes.insertMany([
     address: "1a Market Street",
     day: "tuesday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.951172, lng: -3.188641}
   },
   {
@@ -343,8 +269,6 @@ db.pubQuizzes.insertMany([
     address: "115 George Street",
     day: "tuesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.952368, lng: -3.205146}
   },
   {
@@ -352,8 +276,6 @@ db.pubQuizzes.insertMany([
     address: "95 Buccleuch Street",
     day: "tuesday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 100,
     location: { lat: 55.942156, lng: -3.183954}
   },
   {
@@ -361,8 +283,6 @@ db.pubQuizzes.insertMany([
     address: "58 Shore",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.975379, lng: -3.170406}
   },
   {
@@ -370,8 +290,6 @@ db.pubQuizzes.insertMany([
     address: "52 Constitution Street",
     day: "tuesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 35,
     location: { lat: 55.974792, lng: -3.167448}
   },
   {
@@ -379,8 +297,6 @@ db.pubQuizzes.insertMany([
     address: "30 Yeaman Place",
     day: "tuesday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.939079, lng: -3.218765}
   },
   {
@@ -388,8 +304,6 @@ db.pubQuizzes.insertMany([
     address: "49 Deanhaugh Street",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.958805, lng: -3.209762}
   },
   {
@@ -397,8 +311,6 @@ db.pubQuizzes.insertMany([
     address: "5 Comiston Road",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.924699, lng: -3.209648}
   },
   {
@@ -406,8 +318,6 @@ db.pubQuizzes.insertMany([
     address: "67 Canongate",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.952218, lng: -3.176881}
   },
   {
@@ -415,8 +325,6 @@ db.pubQuizzes.insertMany([
     address: "18 Morrison Street",
     day: "tuesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.945981, lng: -3.206504}
   },
   {
@@ -424,8 +332,6 @@ db.pubQuizzes.insertMany([
     address: "3 Robertson’s Close",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.948657, lng: -3.186004}
   },
   {
@@ -433,8 +339,6 @@ db.pubQuizzes.insertMany([
     address: "198 Lanark Road West",
     day: "tuesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.896397, lng: -3.309502}
   },
   {
@@ -442,8 +346,6 @@ db.pubQuizzes.insertMany([
     address: "367 Leith Walk",
     day: "tuesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 20,
     location: { lat: 55.963762, lng: -3.177484}
   },
   {
@@ -451,8 +353,6 @@ db.pubQuizzes.insertMany([
     address: "58 Dalkeith Road",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.938252, lng: -3.173907}
   },
   {
@@ -460,8 +360,6 @@ db.pubQuizzes.insertMany([
     address: "76 Telford Road, Edinburgh",
     day: "tuesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.961467, lng: -3.241624}
   },
   {
@@ -469,8 +367,6 @@ db.pubQuizzes.insertMany([
     address: "159 Constitution Street",
     day: "tuesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 20,
     location: { lat: 55.971100, lng: -3.170249}
   },
   {
@@ -478,8 +374,6 @@ db.pubQuizzes.insertMany([
     address: "5 Newington Road",
     day: "tuesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.939014, lng: -3.179147}
   },
   {
@@ -487,8 +381,6 @@ db.pubQuizzes.insertMany([
     address: "139 Cowgate",
     day: "tuesday",
     time: "22:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.948373, lng: -3.189893}
   },
   // //wednesday Quizzes
@@ -497,8 +389,6 @@ db.pubQuizzes.insertMany([
     address: "78 St Stephen St",
     day: "wednesday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.957966, lng: -3.206151}
   },
   {
@@ -506,8 +396,6 @@ db.pubQuizzes.insertMany([
     address: "14 Drummond St",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 20,
     location: { lat: 55.947318, lng: -3.185262}
   },
   {
@@ -515,8 +403,6 @@ db.pubQuizzes.insertMany([
     address: "38 Blair St, Edinburgh EH1 1QR",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.948928, lng: -3.187260}
   },
   {
@@ -524,8 +410,6 @@ db.pubQuizzes.insertMany([
     address: "44 Queen Charlotte St",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 15,
     location: { lat: 55.973431, lng: -3.167784}
   },
   {
@@ -533,8 +417,6 @@ db.pubQuizzes.insertMany([
     address: "27 Causewayside",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 40,
     location: { lat: 55.938645, lng: -3.181502}
   },
   {
@@ -542,8 +424,6 @@ db.pubQuizzes.insertMany([
     address: "51a George St",
     day: "wednesday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.953480, lng: -3.198924}
   },
   {
@@ -551,8 +431,6 @@ db.pubQuizzes.insertMany([
     address: "25 Broughton Street",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.957065, lng: -3.187952}
   },
   {
@@ -560,8 +438,6 @@ db.pubQuizzes.insertMany([
     address: "39A Queensferry Street",
     day: "wednesday",
     time: "18:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.950663, lng: -3.209056}
   },
   {
@@ -569,8 +445,6 @@ db.pubQuizzes.insertMany([
     address: "26 George IV Bridge",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.947396, lng: -3.191675}
   },
   {
@@ -578,8 +452,6 @@ db.pubQuizzes.insertMany([
     address: "31 Wright’s Houses",
     day: "wednesday",
     time: "21:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.939844, lng: -3.203631}
   },
   {
@@ -587,8 +459,6 @@ db.pubQuizzes.insertMany([
     address: "34 Shore",
     day: "wednesday",
     time: "18:30",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.976400, lng: -3.169381}
   },
   {
@@ -596,8 +466,6 @@ db.pubQuizzes.insertMany([
     address: "25 William Street",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.976400, lng: -3.169381}
   },
   {
@@ -605,8 +473,6 @@ db.pubQuizzes.insertMany([
     address: "97 Oxgangs Road",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.902214, lng: -3.220860}
   },
   {
@@ -614,8 +480,6 @@ db.pubQuizzes.insertMany([
     address: "7 Charlotte Lane",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.951055, lng: -3.209461}
   },
   {
@@ -623,8 +487,6 @@ db.pubQuizzes.insertMany([
     address: "71 Elm Row, Edinburgh",
     day: "wednesday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 20,
     location: { lat: 55.971019, lng: -3.207297}
   },
   {
@@ -632,8 +494,6 @@ db.pubQuizzes.insertMany([
     address: "10 Bowhill Terrace",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.960622, lng: -3.181252}
   },
   {
@@ -641,8 +501,6 @@ db.pubQuizzes.insertMany([
     address: "8 Trafalgar Street",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.973797, lng: -3.185728}
   },
   {
@@ -650,8 +508,6 @@ db.pubQuizzes.insertMany([
     address: "8 Torphichen Place",
     day: "wednesday",
     time: "19:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.946546, lng: -3.214380}
   },
   {
@@ -659,8 +515,6 @@ db.pubQuizzes.insertMany([
     address: "154 Easter Road",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.960046, lng: -3.171390}
   },
   {
@@ -668,8 +522,6 @@ db.pubQuizzes.insertMany([
     address: "75 Craigmount Brae",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 15,
     location: { lat: 55.952055, lng: -3.303244}
   },
   {
@@ -677,8 +529,6 @@ db.pubQuizzes.insertMany([
     address: "45 Main Street, Davidson’s Mains",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 10,
     location: { lat: 55.965635, lng: -3.272652}
   },
   {
@@ -686,8 +536,6 @@ db.pubQuizzes.insertMany([
     address: "161 Lothian Road",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.945096, lng: -3.204968}
   },
   {
@@ -695,8 +543,6 @@ db.pubQuizzes.insertMany([
     address: "114 Causewayside",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.937311, lng: -3.180803}
   },
   {
@@ -704,8 +550,6 @@ db.pubQuizzes.insertMany([
     address: "114 Causewayside",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.942003, lng: -3.148545}
   },
   {
@@ -713,8 +557,6 @@ db.pubQuizzes.insertMany([
     address: "64 Laverockbank Road",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.979844, lng: -3.202095}
   },
   {
@@ -722,8 +564,6 @@ db.pubQuizzes.insertMany([
     address: "2 Picardy Place",
     day: "wednesday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.956847, lng: -3.187755}
   },
   {
@@ -731,8 +571,6 @@ db.pubQuizzes.insertMany([
     address: "116 St John’s Road",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.942974, lng: -3.283562}
   },
   {
@@ -740,8 +578,6 @@ db.pubQuizzes.insertMany([
     address: "265 Leith Walk",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.965786, lng: -3.175633}
   },
   {
@@ -749,8 +585,6 @@ db.pubQuizzes.insertMany([
     address: "55 South Gyle Broadway",
     day: "wednesday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 35,
     location: { lat: 55.933757, lng: -3.302907}
   },
   {
@@ -758,8 +592,6 @@ db.pubQuizzes.insertMany([
     address: "25 Main Street, Davidson’s Mains,",
     day: "wednesday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.965602, lng: -3.273706}
   },
   // //thursday Quizzes
@@ -768,8 +600,6 @@ db.pubQuizzes.insertMany([
     address: "32 Bread St",
     day: "thursday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 50,
     location: { lat: 55.945765, lng: -3.203805}
   },
   {
@@ -777,8 +607,6 @@ db.pubQuizzes.insertMany([
     address: "7 Spittal St, Edinburgh EH3 9DY",
     day: "thursday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 100,
     location: { lat: 55.946124, lng: -3.203530}
   },
   {
@@ -786,8 +614,6 @@ db.pubQuizzes.insertMany([
     address: "133 Lothian Rd, Edinburgh EH3 9AB",
     day: "thursday",
     time: "18:00",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.945518, lng: -3.205157}
   },
   {
@@ -795,8 +621,6 @@ db.pubQuizzes.insertMany([
     address: "24 Greenside Pl",
     day: "thursday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 25,
     location: { lat: 55.957114, lng: -3.185177}
   },
   {
@@ -804,8 +628,6 @@ db.pubQuizzes.insertMany([
     address: "12 Grassmarket",
     day: "thursday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.954272, lng: -3.187330}
   },
   {
@@ -813,8 +635,6 @@ db.pubQuizzes.insertMany([
     address: "65 S Clerk St",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.939527, lng: -3.179607}
   },
   {
@@ -822,8 +642,6 @@ db.pubQuizzes.insertMany([
     address: "11 Leith St",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 50,
     location: { lat: 55.953809, lng: -3.188237}
   },
   {
@@ -831,8 +649,6 @@ db.pubQuizzes.insertMany([
     address: "47 Buckstone Terrace",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.904557, lng: -3.206851}
   },
   {
@@ -840,8 +656,6 @@ db.pubQuizzes.insertMany([
     address: "19 Blair Street",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.949265, lng: -3.187772}
   },
   {
@@ -849,8 +663,6 @@ db.pubQuizzes.insertMany([
     address: "14 Bridge Road",
     day: "thursday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 15,
     location: { lat: 55.907488, lng: -3.256163}
   },
   {
@@ -858,8 +670,6 @@ db.pubQuizzes.insertMany([
     address: "99b Slateford Road",
     day: "thursday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.933339, lng: -3.234955}
   },
   {
@@ -867,8 +677,6 @@ db.pubQuizzes.insertMany([
     address: "7B Randolph Place",
     day: "thursday",
     time: "19:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.951548, lng: -3.210112}
   },
   {
@@ -876,8 +684,6 @@ db.pubQuizzes.insertMany([
     address: "100 Northfield Broadway",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.955448, lng: -3.140642}
   },
   {
@@ -885,8 +691,6 @@ db.pubQuizzes.insertMany([
     address: "316 Gorgie Road,",
     day: "thursday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.936942, lng: -3.237564}
   },
   {
@@ -894,8 +698,6 @@ db.pubQuizzes.insertMany([
     address: "195 Kingsknowe Road North",
     day: "thursday",
     time: "21:30",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.919748, lng: -3.264780}
   },
   {
@@ -903,8 +705,6 @@ db.pubQuizzes.insertMany([
     address: "604 Lanark Road",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.902227, lng: -3.288514}
   },
   {
@@ -912,8 +712,6 @@ db.pubQuizzes.insertMany([
     address: "172 Morningside Road",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.929310, lng: -3.209987}
   },
   {
@@ -921,8 +719,6 @@ db.pubQuizzes.insertMany([
     address: "241 Portobello High Street",
     day: "thursday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 20,
     location: { lat: 55.951899, lng: -3.111178}
   },
   {
@@ -930,8 +726,6 @@ db.pubQuizzes.insertMany([
     address: "51 Eyre Place",
     day: "thursday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.962016, lng: -3.197718}
   },
   {
@@ -939,8 +733,6 @@ db.pubQuizzes.insertMany([
     address: "7 West Richmond Street",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 25,
     location: { lat: 55.945209, lng: -3.183725}
   },
   {
@@ -948,8 +740,6 @@ db.pubQuizzes.insertMany([
     address: "17 Iona Street",
     day: "thursday",
     time: "19:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.947956, lng: -3.194933}
   },
   {
@@ -957,8 +747,6 @@ db.pubQuizzes.insertMany([
     address: "‎1 Currie’s Close",
     day: "thursday",
     time: "21:00",
-    studentDiscount: false,
-    prize: 50,
     location: { lat: 55.947956, lng: -3.194933}
   },
   {
@@ -966,8 +754,6 @@ db.pubQuizzes.insertMany([
     address: "35 Palmerston Place",
     day: "thursday",
     time: "20:30",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.949612, lng: -3.218463}
   },
  // friday Quizzes
@@ -976,8 +762,6 @@ db.pubQuizzes.insertMany([
     address: "43 Leith St",
     day: "friday",
     time: "19:30",
-    studentDiscount: false,
-    prize: 40,
     location: { lat: 55.947347, lng: -3.197362}
   },
   {
@@ -985,8 +769,6 @@ db.pubQuizzes.insertMany([
     address: "4 Bath Rd",
     day: "friday",
     time: "20:00",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.974584, lng: -3.160807}
   },
   {
@@ -994,8 +776,6 @@ db.pubQuizzes.insertMany([
     address: "50 Mortonhall Gate",
     day: "friday",
     time: "20:30",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.903839, lng: -3.181332}
   },
   // // sunday Quizzes
@@ -1004,8 +784,6 @@ db.pubQuizzes.insertMany([
     address: "36, London Rd, Edinburgh EH7 5BQ",
     day: "sunday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.957460, lng: -3.169408}
   },
   {
@@ -1013,8 +791,6 @@ db.pubQuizzes.insertMany([
     address: "3 Angle Park Terrace",
     day: "sunday",
     time: "19:30",
-    studentDiscount: false,
-    prize: 30,
     location: { lat: 55.938991, lng: -3.223748}
   },
   {
@@ -1022,8 +798,6 @@ db.pubQuizzes.insertMany([
     address: "23 Commercial St",
     day: "sunday",
     time: "21:00",
-    studentDiscount: true,
-    prize: 40,
     location: { lat: 55.976506, lng: -3.171481}
   },
   {
@@ -1031,8 +805,6 @@ db.pubQuizzes.insertMany([
     address: "49 Frederick St",
     day: "sunday",
     time: "20:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.953656, lng: -3.200546}
   },
   {
@@ -1040,8 +812,6 @@ db.pubQuizzes.insertMany([
     address: "36 Shore",
     day: "sunday",
     time: "18:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.976149, lng: -3.169546}
   },
   {
@@ -1049,8 +819,6 @@ db.pubQuizzes.insertMany([
     address: "83 Lothian Rd",
     day: "sunday",
     time: "19:00",
-    studentDiscount: true,
-    prize: 30,
     location: { lat: 55.946628, lng: -3.205517}
   }
 
