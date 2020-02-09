@@ -142,6 +142,7 @@ export default {
   select {
     align-self: center;
     font-size: 0.9em;
+    cursor: select;
   }
 
   input[type="time"] {
@@ -156,6 +157,7 @@ export default {
     border-radius: 5px;
     font-size: 0.8em;
     border: 1px solid #e2e2e2;
+    cursor: pointer;
   }
 
   .discount-radio-wrap {
