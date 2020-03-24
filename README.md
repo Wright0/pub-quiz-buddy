@@ -1,6 +1,6 @@
 # Pub Quiz Buddy
 
-[Pub Quiz Buddy Home Page](https://imgur.com/TVuhCEB)
+![Pub Quiz Buddy Home Page](https://imgur.com/TVuhCEB.png)
 
 ## Project overview
 
