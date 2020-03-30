@@ -1,4 +1,5 @@
 use quizBuddy;
+
 db.dropDatabase();
 
 db.pubQuizzes.insertMany([

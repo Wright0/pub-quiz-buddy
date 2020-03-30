@@ -3,7 +3,7 @@
     <nav class="cont">
 
       <h1><a class="logo-link" href="http://localhost:8080/">PUB QUIZ BUDDY</a></h1>
-      <p>A quiz for every day of the week- if your week only has 5 days</p>
+      <p>A quiz for every day of the week - if your week only has 5 days</p>
 
       <button class="add-quiz" @click="displayForm">Add Pub Quiz</button>
     </nav>
@@ -144,6 +144,10 @@ export default {
   .logo-link{
     text-decoration: none;
     color: #e2e2e2
+  }
+
+  .logo-link:hover{
+    color: #F05A4E;
   }
 
 </style>

@@ -1,7 +1,5 @@
 <template lang="html">
-  <li class='nav-item' :style='{
-    "text-decoration" : (isSelectedProp ? "underline" : "none" ),
-    "color" : (isSelectedProp ? "#F05A4E" : "#e2e2e2" )}'
+  <li class='nav-item' :class="{ active: isSelectedProp }"
     :value="day" @click="handleClick()">{{day}}</li>
 
   </template>
@@ -29,10 +27,16 @@
     letter-spacing: 2px;
     font-size: 1.3em;
     cursor: pointer;
+    color: #e2e2e2;
   }
 
-  li:hover {
-    font-style: italic;
+  .active {
+    color: #F05A4E;
+    text-decoration: underline;
+  }
+
+  .nav-item:hover {
+    color: #F05A4E;
   }
 
 </style>
